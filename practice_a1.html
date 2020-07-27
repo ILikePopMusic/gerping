@@ -37,13 +37,7 @@
     
     </div>
         </div>
-            
-
-    
-    <p style="margin-top: 300px; font-size: 20px;">Disclaimer: There are over 600 words here and some have 2 correct articles. But I only put in one correct one because I don't know how to add two.</p>
-    
-</div>
-
+          
 <div id="json_data">
 
 <script>
@@ -110,7 +104,7 @@
  },
  {
    "A": 16,
-   "B": "das Taxi"
+   "B": "das der Taxi"
  },
  {
    "A": 17,
@@ -130,7 +124,7 @@
  },
  {
    "A": 21,
-   "B": "der Comic"
+   "B": "der das Comic"
  },
  {
    "A": 22,
@@ -326,7 +320,7 @@
  },
  {
    "A": 70,
-   "B": "der Bekannte"
+   "B": "der die Bekannte"
  },
  {
    "A": 71,
@@ -882,7 +876,7 @@
  },
  {
    "A": 209,
-   "B": "die Cola"
+   "B": "die das Cola"
  },
  {
    "A": 210,
@@ -906,7 +900,7 @@
  },
  {
    "A": 215,
-   "B": "der Joghurt"
+   "B": "der das Joghurt"
  },
  {
    "A": 216,
@@ -1018,7 +1012,7 @@
  },
  {
    "A": 243,
-   "B": "der Bankangestellte"
+   "B": "der die Bankangestellte"
  },
  {
    "A": 244,
@@ -2154,7 +2148,7 @@
  },
  {
    "A": 527,
-   "B": "der Verwandte"
+   "B": "der die Verwandte"
  },
  {
    "A": 528,
@@ -2578,7 +2572,7 @@
  },
  {
    "A": 633,
-   "B": "der Erwachsene"
+   "B": "der die Erwachsene"
  },
  {
    "A": 634,
@@ -2630,7 +2624,7 @@
  },
  {
    "A": 646,
-   "B": "das Silvester"
+   "B": "das der Silvester"
  },
  {
    "A": 647,
@@ -2751,6 +2745,10 @@
  {
    "A": 676,
    "B": "der Papierstreifen"
+ },
+ {
+   "A": 677,
+   "B": "der die Deutsche"
  }
 ]
 </script>
@@ -2759,95 +2757,90 @@
 
 
 <script>
-    const derBtn = document.getElementById("der")
-        
-    const dieBtn = document.getElementById("die")
-        
-    const dasBtn = document.getElementById("das")
-        
+  const derBtn = document.getElementById("der")
+      
+  const dieBtn = document.getElementById("die")
+      
+  const dasBtn = document.getElementById("das")
+      
 
 var corAns = 0;
 var incorAns = 0;
 var min = 0;
 var max = data.length - 1;
 
+
 function getWord() {
-    var rnd = Math.round(Math.floor(Math.random() * (+max + 1 - +min)) + +min)
-    randomNumber = Number(rnd)
-    newObject = data[randomNumber].B.split(' ')
-    randomWord = newObject[1]
-    randomArticle = newObject[0]
-    console.log(randomArticle, randomWord)
-    testVokabel = document.getElementById("vokabel");
-    oldText = testVokabel.innerHTML;
-    testVokabel.innerHTML = randomWord;
-}
+  var rnd = Math.round(Math.floor(Math.random() * (+max + 1 - +min)) + +min)
+  randomNumber = Number(rnd)
+  newObject = data[randomNumber].B.split(' ') //newObject = [article, noun] or [article, article, noun]
+  var testVokabel = document.getElementById("vokabel");
+  var oldText = testVokabel.innerHTML;
+  testVokabel.innerHTML = newObject[newObject.length - 1];
+  }
 getWord() //start the function
 
 
 derBtn.addEventListener('click', function(event) {
-    if (randomArticle == "der") {
-        console.log("NICE")
-        corAns = corAns + 1
-        console.log("Correct Answers:", corAns)
-        var answer = document.getElementById("correct_answer")
-        var oldAnswer = answer.innerHTML
-        answer.innerHTML = corAns;
-        getWord()
-        
-    }
-    else if (randomArticle != "der") {
-        console.log("NOPE")
-        incorAns = incorAns + 1
-        console.log(incorAns)
-        var falseAnswer = document.getElementById("incorrect_answer")
-        var oldfalseAnswer = falseAnswer.innerHTML
-        falseAnswer.innerHTML = incorAns;
-        getWord()
-    }
+  if (newObject[0] == "der" || newObject[1] == "der") {
+      corAns = corAns + 1
+      console.log("Correct Answers:", corAns)
+      var answer = document.getElementById("correct_answer")
+      var oldAnswer = answer.innerHTML
+      answer.innerHTML = corAns;
+      getWord()
+      
+  }
+  else {
+      incorAns = incorAns + 1
+      console.log(incorAns)
+      var falseAnswer = document.getElementById("incorrect_answer")
+      var oldfalseAnswer = falseAnswer.innerHTML
+      falseAnswer.innerHTML = incorAns;
+      getWord()
+  }
 })
 
 dieBtn.addEventListener('click', function(event) {
-    if (randomArticle == "die") {
-        console.log("NICE")
-        corAns = corAns + 1
-        var answer = document.getElementById("correct_answer")
-        var oldAnswer = answer.innerHTML
-        answer.innerHTML = corAns;
-        getWord()
-    }
-    else if (randomArticle != "die") {
-        console.log("NOPE")
-        incorAns = incorAns + 1
-        console.log(incorAns)
-        var falseAnswer = document.getElementById("incorrect_answer")
-        var oldfalseAnswer = falseAnswer.innerHTML
-        falseAnswer.innerHTML = incorAns;
-        getWord()
-    }
+  if (newObject[0] == "die" || newObject[1] == "die") {
+      corAns = corAns + 1
+      var answer = document.getElementById("correct_answer")
+      var oldAnswer = answer.innerHTML
+      answer.innerHTML = corAns;
+      getWord()
+      
+  }
+  else {
+      console.log("NOPE")
+      incorAns = incorAns + 1
+      console.log(incorAns)
+      var falseAnswer = document.getElementById("incorrect_answer")
+      var oldfalseAnswer = falseAnswer.innerHTML
+      falseAnswer.innerHTML = incorAns;
+      getWord()
+  }
 })
 
 dasBtn.addEventListener('click', function(event) {
-
-    if (randomArticle == "das") {
-        console.log("NICE")
-        corAns = corAns + 1
-        console.log("Correct Answers:", corAns)
-        var answer = document.getElementById("correct_answer")
-        var oldAnswer = answer.innerHTML
-        answer.innerHTML = corAns;
-        getWord()
-        
-    }
-    else if (randomArticle != "das") {
-        console.log("NOPE")
-        incorAns = incorAns + 1
-        console.log(incorAns)
-        var falseAnswer = document.getElementById("incorrect_answer")
-        var oldfalseAnswer = falseAnswer.innerHTML
-        falseAnswer.innerHTML = incorAns;
-        getWord()
-    }
+  if (newObject[0] == "das" || newObject[1] == "das") {
+      console.log("NICE")
+      corAns = corAns + 1
+      console.log("Correct Answers:", corAns)
+      var answer = document.getElementById("correct_answer")
+      var oldAnswer = answer.innerHTML
+      answer.innerHTML = corAns;
+      getWord()
+      
+  }
+  else {
+      console.log("NOPE")
+      incorAns = incorAns + 1
+      console.log(incorAns)
+      var falseAnswer = document.getElementById("incorrect_answer")
+      var oldfalseAnswer = falseAnswer.innerHTML
+      falseAnswer.innerHTML = incorAns;
+      getWord()
+  }
 })
 </script>
 
