@@ -138,24 +138,21 @@ var corAns = 0;
 var incorAns = 0;
 var min = 0;
 var max = data.length - 1;
-var randomArticle = ["", ""];
-var randomWord = [""];
-
 
 
 function getWord() {
     var rnd = Math.round(Math.floor(Math.random() * (+max + 1 - +min)) + +min)
     randomNumber = Number(rnd)
-    newObject = data[randomNumber].B.split(' ')
-    randomWord = newObject[newObject.length];
-    
-}
+    newObject = data[randomNumber].B.split(' ') //newObject = [article, noun] or [article, article, noun]
+    var testVokabel = document.getElementById("vokabel");
+    var oldText = testVokabel.innerHTML;
+    testVokabel.innerHTML = newObject[newObject.length - 1];
+    }
 getWord() //start the function
 
 
 derBtn.addEventListener('click', function(event) {
-    if (randomArticle == "der") {
-        console.log("NICE")
+    if (newObject[0] == "der" || newObject[1] == "der") {
         corAns = corAns + 1
         console.log("Correct Answers:", corAns)
         var answer = document.getElementById("correct_answer")
@@ -164,8 +161,7 @@ derBtn.addEventListener('click', function(event) {
         getWord()
         
     }
-    else if (randomArticle != "der") {
-        console.log("NOPE")
+    else {
         incorAns = incorAns + 1
         console.log(incorAns)
         var falseAnswer = document.getElementById("incorrect_answer")
@@ -176,15 +172,15 @@ derBtn.addEventListener('click', function(event) {
 })
 
 dieBtn.addEventListener('click', function(event) {
-    if (randomArticle == "die") {
-        console.log("NICE")
+    if (newObject[0] == "die" || newObject[1] == "die") {
         corAns = corAns + 1
         var answer = document.getElementById("correct_answer")
         var oldAnswer = answer.innerHTML
         answer.innerHTML = corAns;
         getWord()
+        
     }
-    else if (randomArticle != "die") {
+    else {
         console.log("NOPE")
         incorAns = incorAns + 1
         console.log(incorAns)
@@ -196,8 +192,7 @@ dieBtn.addEventListener('click', function(event) {
 })
 
 dasBtn.addEventListener('click', function(event) {
-
-    if (randomArticle == "das") {
+    if (newObject[0] == "das" || newObject[1] == "das") {
         console.log("NICE")
         corAns = corAns + 1
         console.log("Correct Answers:", corAns)
@@ -207,7 +202,7 @@ dasBtn.addEventListener('click', function(event) {
         getWord()
         
     }
-    else if (randomArticle != "das") {
+    else {
         console.log("NOPE")
         incorAns = incorAns + 1
         console.log(incorAns)
