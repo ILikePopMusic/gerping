@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
 <head>
     <title>Practice German</title>
 
@@ -8,38 +10,213 @@
 </head>
 <body >
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap" rel="stylesheet"> 
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
-    <img style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0px; max-width: 1200px; max-height: 400px;"
-    
-    src="img/hh_skyline.png">
-<!-- background -->
+
 <div    class="background">
-    <h1>  <!-- Links -->
-        <a style="margin-left: 0px" href="index.html">Home</a>
-        <div class="dropdown">
-        <button class="dropbtn" href="practice.html">Practice</button>
-            <div class="dropdown-content"> 
-                <a href="A1vokabeln.html">A1-Vokabulary</a>
-                <a href="A2vokabeln.html">A1-Vokabulary</a>
-                <a href="B1vokabeln.html">A1-Vokabulary</a>
-                <a href="B2vokabeln.html">A1-Vokabulary</a>
-                <a href="allevokabeln.html">Put that shit <br>right into my veints</a>             
-            </div>
-        </div>
-        <a href="contact.html">Play</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-        <a href="contact.html">Send me Money</a>
-    </h1>  
-    
+    <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
+    <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;"> <!-- Links -->
+      <a style="margin-left: 45px" href="index.html">Home</a>
+      <a href="difficulty.html">Gerping</a>
+      <a href="under_construction.html">Play</a>
+      <a href="under_construction.html">FAQ</a>
+      <a href="under_construction.html">Contact</a>
+      <a href="thank_you.html">Send me Money</a>
+  </h1>  
+  </div>
+   
+    <!-- VOKABELBOX -->
+    <div class="vokabel_test">
+    <u><h2 class ="vokabel" id="vokabel">die Vokabel</h2></u>   <!-- VOKABELN -->
+    <div style="text-align: center;">                           <!-- BUTTONS -->
+    <button class="button" id="der">Der</button>                                   
+    <button class="button" id="die">Die</button>                                    
+    <button class="button" id="das">Das</button>           
+    </div>
+    <div style="text-align: center" class="answer_counter">
+        
+        <h2>Correct: <scope id="correct_answer">0</scope> <scope style="margin-left: 50px;"> Incorrect: </scope><scope id="incorrect_answer">0</scope></h2>
     
     </div>
+        </div>
+            
+
+    
+    <p style="margin-top: 300px; font-size: 20px;">Disclaimer: There are over 600 words here and some have 2 correct articles. But I only put in one correct one because I don't know how to add two.</p>
+    
+</div>
+
+<div id="json_data">
+
+<script>
+    var data = [
+ {
+   "A": 1,
+   "B": "der die Automat"
+ },
+ {
+   "A": 2,
+   "B": "das die Baby"
+ },
+ {
+   "A": 3,
+   "B": "die der Banane"
+ },
+ {
+   "A": 4,
+   "B": "der Computer"
+ },
+ {
+   "A": 5,
+   "B": "der das Film"
+ },
+ {
+   "A": 6,
+   "B": "das Foto"
+ },
+ {
+   "A": 7,
+   "B": "der Geldautomat"
+ },
+ {
+   "A": 8,
+   "B": "der Bankomat"
+ },
+ {
+   "A": 9,
+   "B": "die Gitarre"
+ },
+ {
+   "A": 10,
+   "B": "das Internet"
+ },
+ {
+   "A": 11,
+   "B": "der Kaffee"
+ },
+ {
+   "A": 12,
+   "B": "das Museum"
+ },
+ {
+   "A": 13,
+   "B": "die Post"
+ },
+ {
+   "A": 14,
+   "B": "das Radio"
+ },
+ {
+   "A": 15,
+   "B": "die SMS"
+ },
+ {
+   "A": 16,
+   "B": "das Taxi"
+ },
+ {
+   "A": 17,
+   "B": "das Telefon"
+ },
+ {
+   "A": 18,
+   "B": "die Universität"
+ }
+]
+</script>
 
 </div>
 
-<script>
 
+<script>
+    const derBtn = document.getElementById("der")
+        
+    const dieBtn = document.getElementById("die")
+        
+    const dasBtn = document.getElementById("das")
+        
+
+var corAns = 0;
+var incorAns = 0;
+var min = 0;
+var max = data.length - 1;
+var randomArticle = ["", ""];
+var randomWord = [""];
+
+
+
+function getWord() {
+    var rnd = Math.round(Math.floor(Math.random() * (+max + 1 - +min)) + +min)
+    randomNumber = Number(rnd)
+    newObject = data[randomNumber].B.split(' ')
+    randomWord = newObject[newObject.length];
+    
+}
+getWord() //start the function
+
+
+derBtn.addEventListener('click', function(event) {
+    if (randomArticle == "der") {
+        console.log("NICE")
+        corAns = corAns + 1
+        console.log("Correct Answers:", corAns)
+        var answer = document.getElementById("correct_answer")
+        var oldAnswer = answer.innerHTML
+        answer.innerHTML = corAns;
+        getWord()
+        
+    }
+    else if (randomArticle != "der") {
+        console.log("NOPE")
+        incorAns = incorAns + 1
+        console.log(incorAns)
+        var falseAnswer = document.getElementById("incorrect_answer")
+        var oldfalseAnswer = falseAnswer.innerHTML
+        falseAnswer.innerHTML = incorAns;
+        getWord()
+    }
+})
+
+dieBtn.addEventListener('click', function(event) {
+    if (randomArticle == "die") {
+        console.log("NICE")
+        corAns = corAns + 1
+        var answer = document.getElementById("correct_answer")
+        var oldAnswer = answer.innerHTML
+        answer.innerHTML = corAns;
+        getWord()
+    }
+    else if (randomArticle != "die") {
+        console.log("NOPE")
+        incorAns = incorAns + 1
+        console.log(incorAns)
+        var falseAnswer = document.getElementById("incorrect_answer")
+        var oldfalseAnswer = falseAnswer.innerHTML
+        falseAnswer.innerHTML = incorAns;
+        getWord()
+    }
+})
+
+dasBtn.addEventListener('click', function(event) {
+
+    if (randomArticle == "das") {
+        console.log("NICE")
+        corAns = corAns + 1
+        console.log("Correct Answers:", corAns)
+        var answer = document.getElementById("correct_answer")
+        var oldAnswer = answer.innerHTML
+        answer.innerHTML = corAns;
+        getWord()
+        
+    }
+    else if (randomArticle != "das") {
+        console.log("NOPE")
+        incorAns = incorAns + 1
+        console.log(incorAns)
+        var falseAnswer = document.getElementById("incorrect_answer")
+        var oldfalseAnswer = falseAnswer.innerHTML
+        falseAnswer.innerHTML = incorAns;
+        getWord()
+    }
+})
 </script>
 
 
