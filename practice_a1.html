@@ -22,6 +22,21 @@
       <a href="thank_you.html">Send me Money</a>
   </h1>  
   </div>
+  <div 
+  style="
+  width: 300px;
+  height: 200px;
+  margin-left: 50px;
+  margin-top: 100px;
+  float: left;">
+
+  <h2 id="correct_old_word"
+  style="
+  color: green;
+  font-size: 30px;
+  text-align: center;"></h2>
+  
+  </div>
    
     <!-- VOKABELBOX -->
     <div class="vokabel_test">
@@ -37,6 +52,7 @@
     
     </div>
         </div>
+    
           
 <div id="json_data">
 
@@ -2784,19 +2800,26 @@ getWord() //start the function
 derBtn.addEventListener('click', function(event) {
   if (newObject[0] == "der" || newObject[1] == "der") {
       corAns = corAns + 1
-      console.log("Correct Answers:", corAns)
       var answer = document.getElementById("correct_answer")
       var oldAnswer = answer.innerHTML
       answer.innerHTML = corAns;
+      var infoField = document.getElementById("correct_old_word")
+      var correctAnswer = infoField.innerHTML;
+      infoField.innerHTML = " "
       getWord()
       
   }
   else {
       incorAns = incorAns + 1
-      console.log(incorAns)
       var falseAnswer = document.getElementById("incorrect_answer")
       var oldfalseAnswer = falseAnswer.innerHTML
       falseAnswer.innerHTML = incorAns;
+      var infoField = document.getElementById("correct_old_word")
+      var correctAnswer = infoField.innerHTML;
+      if (data.length == 3)
+          infoField.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
+        else
+          infoField.innerHTML = newObject[0] + " " + newObject[1]
       getWord()
   }
 })
@@ -2807,38 +2830,49 @@ dieBtn.addEventListener('click', function(event) {
       var answer = document.getElementById("correct_answer")
       var oldAnswer = answer.innerHTML
       answer.innerHTML = corAns;
+      var infoField = document.getElementById("correct_old_word")
+      var correctAnswer = infoField.innerHTML;
+      infoField.innerHTML = " "
       getWord()
       
   }
   else {
-      console.log("NOPE")
       incorAns = incorAns + 1
-      console.log(incorAns)
       var falseAnswer = document.getElementById("incorrect_answer")
       var oldfalseAnswer = falseAnswer.innerHTML
       falseAnswer.innerHTML = incorAns;
+      var infoField = document.getElementById("correct_old_word")
+      var correctAnswer = infoField.innerHTML;
+        if (data.length == 3)
+          infoField.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
+        else
+          infoField.innerHTML = newObject[0] + " " + newObject[1]
       getWord()
   }
 })
 
 dasBtn.addEventListener('click', function(event) {
   if (newObject[0] == "das" || newObject[1] == "das") {
-      console.log("NICE")
       corAns = corAns + 1
-      console.log("Correct Answers:", corAns)
       var answer = document.getElementById("correct_answer")
       var oldAnswer = answer.innerHTML
       answer.innerHTML = corAns;
+      var infoField = document.getElementById("correct_old_word")
+      var correctAnswer = infoField.innerHTML;
+      infoField.innerHTML = " "
       getWord()
-      
   }
   else {
-      console.log("NOPE")
       incorAns = incorAns + 1
-      console.log(incorAns)
       var falseAnswer = document.getElementById("incorrect_answer")
       var oldfalseAnswer = falseAnswer.innerHTML
       falseAnswer.innerHTML = incorAns;
+      var infoField = document.getElementById("correct_old_word")
+      var correctAnswer = infoField.innerHTML;
+      if (data.length == 3)
+          infoField.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
+        else
+          infoField.innerHTML = newObject[0] + " " + newObject[1]
       getWord()
   }
 })
