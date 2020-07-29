@@ -6,7 +6,7 @@ a:link, a:visited {
     width: 50%
 }
 .background {
-    font-family: 'Quicksand', sans-serif;;
+        font-family: 'Quicksand', sans-serif;
         max-width: 1200px;
         margin: auto;
         text-align: left;
@@ -69,9 +69,9 @@ button:active {
         font-size: 18px;
 }
 .answer_display {
-width: 300px;
-  height: 200px;
-  margin-left: 50px;
-  margin-top: 100px;
+        width: 300px;
+        height: 200px;
+        margin-left: 50px;
+        margin-top: 100px;
 }
 

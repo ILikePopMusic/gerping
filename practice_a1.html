@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
 <head>
     <title>Practice German</title>
-
-
-
 </head>
 <body >
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
 
-<div    class="background">
-    <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
-    <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;"> <!-- Links -->
-      <a style="margin-left: 45px" href="index.html">Home</a>
-      <a href="difficulty.html">Gerping</a>
-      <a href="under_construction.html">Play</a>
-      <a href="faq.html">FAQ</a>
-      <a href="under_construction.html">Contact</a>
-      <a href="thank_you.html">Send me Money</a>
-  </h1>  
-  </div>
+<div class="background">
+      <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
+      <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;"> <!-- Links -->
+          <a style="margin-left: 45px" href="index.html">Home</a>
+          <a href="difficulty.html">Gerping</a>
+          <a href="under_construction.html">Play</a>
+          <a href="faq.html">FAQ</a>
+          <a href="under_construction.html">Contact</a>
+          <a href="thank_you.html">Send me Money</a>
+    </h1>  
+</div>
   <div class="answer_display"
   style="float: right;">
-
   <h2 id="wrong_old_word"
   style="
   color: red;
   font-size: 30px;
   text-align: center;"></h2>
-  </div>
+</div>
   <div class="answer_display"
   style="float: left;">
 
@@ -40,9 +37,9 @@
   font-size: 30px;
   text-align: center;"></h2>
   </div>
-      <!-- VOKABELBOX -->
+    <!-- VOKABELBOX -->
     <div class="vokabel_test">
-    <u><h2 class ="vokabel" id="vokabel">die Vokabel</h2></u>  <!-- VOKABELN -->
+    <u><h2 class ="vokabel" id="vokabel">die Vokabel</h2></u> 
     <div style="text-align: center;">                           <!-- BUTTONS -->
     <button class="button" id="der">der</button>                                   
     <button class="button" id="die">die</button>                                    
@@ -170,7 +167,7 @@
  },
  {
    "A": 28,
-   "B": "der Teil"
+   "B": "der das Teil"
  },
  {
    "A": 29,
@@ -1118,7 +1115,7 @@
  },
  {
    "A": 265,
-   "B": "die heiße Schokolade"
+   "B": "die Schokolade"
  },
  {
    "A": 266,
@@ -1330,7 +1327,7 @@
  },
  {
    "A": 318,
-   "B": "dfas Interview"
+   "B": "das Interview"
  },
  {
    "A": 319,
@@ -2805,7 +2802,7 @@ function correctWord() {
       var infoFieldCorrect = document.getElementById("correct_old_word")
       var infoFieldWrong = document.getElementById("wrong_old_word")
       var correctAnswer = infoFieldCorrect.innerHTML;
-      if (data.length == 3) {
+      if (newObject.length == 3) {
       infoFieldCorrect.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
       infoFieldWrong.innerHTML = " "
       }
@@ -2824,7 +2821,7 @@ function wrongWord() {
   var infoFieldWrong = document.getElementById("wrong_old_word")
   var infoFieldCorrect = document.getElementById("correct_old_word")
   var correctAnswer = infoFieldWrong.innerHTML;
-  if (data.length == 3) {
+  if (newObject.length == 3) {
     infoFieldWrong.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
     infoFieldCorrect.innerHTML = " "    
   }

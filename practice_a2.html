@@ -2857,7 +2857,7 @@ function correctWord() {
       var infoFieldCorrect = document.getElementById("correct_old_word")
       var infoFieldWrong = document.getElementById("wrong_old_word")
       var correctAnswer = infoFieldCorrect.innerHTML;
-      if (data.length == 3) {
+      if (newObject.length == 3) {
       infoFieldCorrect.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
       infoFieldWrong.innerHTML = " "
       }
@@ -2876,7 +2876,7 @@ function wrongWord() {
   var infoFieldWrong = document.getElementById("wrong_old_word")
   var infoFieldCorrect = document.getElementById("correct_old_word")
   var correctAnswer = infoFieldWrong.innerHTML;
-  if (data.length == 3) {
+  if (newObject.length == 3) {
     infoFieldWrong.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
     infoFieldCorrect.innerHTML = " "    
   }
