@@ -68,4 +68,10 @@ button:active {
         color: #636363;
         font-size: 18px;
 }
+.answer_display {
+width: 300px;
+  height: 200px;
+  margin-left: 50px;
+  margin-top: 100px;
+}
 
