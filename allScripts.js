@@ -1,81 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-    <meta charset="UTF-8">
-<head>
-    <title>Practice German</title>
-</head>
-<body >
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
-
-<div class="background">
-      <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
-      <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;"> <!-- Links -->
-          <a style="margin-left: 45px" href="index.html">Home</a>
-          <a href="difficulty.html">Gerping</a>
-          <a href="under_construction.html">Play</a>
-          <a href="faq.html">FAQ</a>
-          <a href="under_construction.html">Contact</a>
-          <a href="thank_you.html">Send me Money</a>
-    </h1>  
-</div>
-<div class="answer_display"
-  style="float: right;">
-  <h2 id="wrong_old_word"
-  style="
-  color: red;
-  font-size: 30px;
-  text-align: center;"></h2>
-</div>
-  <div class="answer_display"
-  style="float: left;">
-
-  <h2 id="correct_old_word"
-  style="
-  color: green;
-  font-size: 30px;
-  text-align: center;"></h2>
-</div>
-    <!-- VOKABELBOX -->
-<div class="vokabel_test">
-    <u><h2 class ="vokabel" id="vokabel">die Vokabel</h2></u> 
-    <div style="text-align: center;">                           <!-- BUTTONS -->
-    <button class="button" id="der">der</button>                                   
-    <button class="button" id="die">die</button>                                    
-    <button class="button" id="das">das</button>           
-    </div>
-    <div style="text-align: center" class="answer_counter">
-        
-        <h2>Correct: <scope id="correct_answer">0</scope> <scope style="margin-left: 50px;"> Incorrect: </scope><scope id="incorrect_answer">0</scope></h2>
-    
-    </div>
-    <div class="answer_stats">
-
-      <h3 style="text-align: center;">Total words: <scope id="total_words" style="margin-left: 20px;">0</scope></h3>
-      <h3 style="text-align: center;">Success rate: <scope id="success_rate" style="margin-left: 12px; color: black;">0 %</scope></h3>
-      
-      
-      </div>
-    
-</div>
-    <!-- Liste mit falschen Vokabeln -->
-
-<div class="wrong_vocab_box" style="
-  text-align: center;
-  float: right;
-  height: 500px;
-  width: 300px;">
-    
-    <button class="vocab_button" id="wrong_vocab_button">Show wrong Words</button>
-    <h2 id="wrong_vocab_list" style="color: black; font-size: 18px; margin-top: 0px;"></h2>
-    
-    </div>
-
-          
-<div id="json_data">
-
 <script>
+function getWord() {
+    var rnd = Math.round(Math.floor(Math.random() * (+max + 1 - +min)) + +min)
+    randomNumber = Number(rnd)
+    newObject = data[randomNumber].B.split(' ') //newObject = [article, noun] or [article, article, noun]
+    var testVokabel = document.getElementById("vokabel");
+    var oldText = testVokabel.innerHTML;
+    testVokabel.innerHTML = newObject[newObject.length - 1];
+  }
+
+  function correctWord() {
+    corAns = corAns + 1
+        var answer = document.getElementById("correct_answer")
+        var oldAnswer = answer.innerHTML
+        answer.innerHTML = corAns;
+        var infoFieldCorrect = document.getElementById("correct_old_word")
+        var infoFieldWrong = document.getElementById("wrong_old_word")
+        var correctAnswer = infoFieldCorrect.innerHTML;
+        if (data.length == 3) {
+        infoFieldCorrect.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
+        infoFieldWrong.innerHTML = " "
+        }
+        else {
+        infoFieldCorrect.innerHTML = newObject[0] + " " + newObject[1]
+        infoFieldWrong.innerHTML = " "
+        }
+        getWord()
+  }
+  
+  function wrongWord() {
+    incorAns = incorAns + 1
+    var falseAnswer = document.getElementById("incorrect_answer")
+    var oldfalseAnswer = falseAnswer.innerHTML
+    falseAnswer.innerHTML = incorAns;
+    var infoFieldWrong = document.getElementById("wrong_old_word")
+    var infoFieldCorrect = document.getElementById("correct_old_word")
+    var correctAnswer = infoFieldWrong.innerHTML;
+    if (data.length == 3) {
+      infoFieldWrong.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
+      infoFieldCorrect.innerHTML = " "    
+    }
+    else {
+      infoFieldWrong.innerHTML = newObject[0] + " " + newObject[1]
+      infoFieldCorrect.innerHTML = " "    
+    }
+    getWord()
+  }
+
+
     var data = [
  {
    "A": 1,
@@ -187,7 +158,7 @@
  },
  {
    "A": 28,
-   "B": "der das Teil"
+   "B": "der Teil"
  },
  {
    "A": 29,
@@ -1135,7 +1106,7 @@
  },
  {
    "A": 265,
-   "B": "die Schokolade"
+   "B": "die heiße Schokolade"
  },
  {
    "A": 266,
@@ -1331,7 +1302,7 @@
  },
  {
    "A": 314,
-   "B": "das Fußballspiel"
+   "B": "dfas Fußballspiel"
  },
  {
    "A": 315,
@@ -1347,7 +1318,7 @@
  },
  {
    "A": 318,
-   "B": "das Interview"
+   "B": "dfas Interview"
  },
  {
    "A": 319,
@@ -1467,7 +1438,7 @@
  },
  {
    "A": 348,
-   "B": "die Telearbeit"
+   "B": "die Telearbeit3"
  },
  {
    "A": 349,
@@ -2787,124 +2758,3 @@
  }
 ]
 </script>
-
-</div>
-
-
-<script>
-const derBtn = document.getElementById("der")
-const dieBtn = document.getElementById("die")
-const dasBtn = document.getElementById("das")
-const wordsBtn = document.getElementById("wrong_vocab_button")
-
-var corAns = 0;
-var incorAns = 0;
-var min = 0;
-var max = data.length - 1;
-var totalWords = 0;
-var wrongWords = [];
-
-function getWord() {
-  var rnd = Math.round(Math.floor(Math.random() * (+max + 1 - +min)) + +min)
-  randomNumber = Number(rnd)
-  newObject = data[randomNumber].B.split(' ') //newObject = [article, noun] or [article, article, noun]
-  var testVokabel = document.getElementById("vokabel");
-  var oldText = testVokabel.innerHTML;
-  testVokabel.innerHTML = newObject[newObject.length - 1];
-}
-function getStats() {
-  var totalWords = document.getElementById("total_words")
-  totalWords.innerHTML = corAns + incorAns;
-  var successRate = document.getElementById("success_rate")
-  successRate.innerHTML = Math.round(corAns / (corAns + incorAns) * 100) + " %";
-    if ((corAns / (corAns + incorAns) * 100) < 50) {
-      document.getElementById("success_rate").style.color = "red";
-    }
-    else {
-      document.getElementById("success_rate").style.color = "green";
-    }
-}
-function wrongWordList() {
-if (newObject.length == 3) {
-  wrongWords.push("<br>" + newObject[0] + " " + newObject[1] + " " + newObject[2]);
-}
-else {
-  wrongWords.push("<br>" + newObject[0] + " " + newObject[1])
-}
-
-}
-function correctWord() {
-      corAns = corAns + 1
-      var answer = document.getElementById("correct_answer")
-      var oldAnswer = answer.innerHTML
-      answer.innerHTML = corAns;
-      var infoFieldCorrect = document.getElementById("correct_old_word")
-      var infoFieldWrong = document.getElementById("wrong_old_word")
-      var correctAnswer = infoFieldCorrect.innerHTML;
-      if (newObject.length == 3) {
-      infoFieldCorrect.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
-      infoFieldWrong.innerHTML = " "
-      }
-      else {
-      infoFieldCorrect.innerHTML = newObject[0] + " " + newObject[1]
-      infoFieldWrong.innerHTML = " "
-      }
-      getStats()
-      getWord()
-}
-function wrongWord() {
-  incorAns = incorAns + 1
-  var falseAnswer = document.getElementById("incorrect_answer")
-  var oldfalseAnswer = falseAnswer.innerHTML
-  falseAnswer.innerHTML = incorAns;
-  var infoFieldWrong = document.getElementById("wrong_old_word")
-  var infoFieldCorrect = document.getElementById("correct_old_word")
-  var correctAnswer = infoFieldWrong.innerHTML;
-  if (newObject.length == 3) {
-    infoFieldWrong.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
-    infoFieldCorrect.innerHTML = " "    
-  }
-  else {
-    infoFieldWrong.innerHTML = newObject[0] + " " + newObject[1]
-    infoFieldCorrect.innerHTML = " "    
-  }
-  getStats()
-  wrongWordList()
-  getWord()
-}
-
-getWord() //start the function
-
-derBtn.addEventListener('click', function(event) {
-  if (newObject[0] == "der" || newObject[1] == "der") {
-  correctWord()      
-  }
-  else {
-  wrongWord()
-  }
-})
-dieBtn.addEventListener('click', function(event) {
-  if (newObject[0] == "die" || newObject[1] == "die") {
-  correctWord() 
-  }
-  else {
-  wrongWord()
-  }
-})
-dasBtn.addEventListener('click', function(event) {
-  if (newObject[0] == "das" || newObject[1] == "das") {
-  correctWord() 
-  }
-  else {
-  wrongWord()
-  }
-})
-wordsBtn.addEventListener('click', function(event) {
- var list = document.getElementById("wrong_vocab_list")
- list.innerHTML = wrongWords
-})
-</script>
-
-
-</body>
-</html>

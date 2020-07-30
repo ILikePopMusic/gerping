@@ -59,6 +59,29 @@ button:active {
         box-shadow: 0 5px #666;
         transform: translateY(4px);
       }
+
+.vocab_button {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: black;
+        background-color: #eaeaea;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        margin: 20px;
+        }
+.vocab_button:hover {background-color: #dfdfdf}
+      
+.vocab_button:active {
+        background-color:#dadada;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
 .faq_question {
         color: black;
         font-size: 18px;
