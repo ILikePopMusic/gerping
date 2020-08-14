@@ -6,7 +6,8 @@ var originalText = document.getElementById("original_text")
 
     var submit = document.getElementById("submit_button")
     submit.addEventListener("click", function(event) {
-    while (true) {                  
+    while (true) {      
+        textDisplay.style.visibility = "visible"            
         if (document.querySelector(".blank_" + i) == null) {
             console.log("document null")
             break;
@@ -16,7 +17,6 @@ var originalText = document.getElementById("original_text")
         word[i].innerText = blank[i]
         i = i + 1;
         }
-    textDisplay.style.visibility = "visible"
     i = 1;
     })
 

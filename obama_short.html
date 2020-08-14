@@ -17,14 +17,14 @@
       <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;">
           <a style="margin-left: 45px" href="index.html">Home</a>
           <a href="difficulty.html">Gerping</a>
-          <a href="madlibstest.html">Play</a>
+          <a href="play.html">Play</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
           <a href="thank_you.html">Send me Money</a>
     </h1>  
 </div>
 <div class="game_box" style="margin-left: 150px; margin-top: 50px;">
-<h1>Intro Sprachassistent</h1>
+<h1>Obamas Rede (kurz)</h1>
 
 <div>
     <input class="blank_1" style="margin-top: 10px;"><label style="margin-left: 10px;">Begrüßung</label><br>
@@ -41,7 +41,7 @@
     <input class="blank_12" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort in einer Stadt (Plural)</label><br>
     <input class="blank_13" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
     <input class="blank_14" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
-    <input class="blank_15" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (Possessivartikel 3. Pers. Plural, Dativ</label><br>
+    <input class="blank_15" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (Possessivartikel 3. Pers. Plural, Dativ)</label><br>
     <input class="blank_16" style="margin-top: 10px;"><label style="margin-left: 10px;">politische Gruppe (plural, Dativ)</label><br>
     <input class="blank_17" style="margin-top: 10px;"><label style="margin-left: 10px;">politische Gruppe (plural, Dativ)</label><br>
     <input class="blank_18" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe als Nomen (plural, Dativ)</label><br>
@@ -53,9 +53,8 @@
     <input class="blank_24" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Akkusativ)</label><br>
     <input class="blank_25" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural)</label><br>
     <input class="blank_26" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural)</label><br>
-    <input class="blank_27" style="margin-top: 10px;"><label style="margin-left: 10px;">Firmenname</label><br>
-    <input class="blank_28" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv (plural, Nominativ)</label><br>
-    
+    <input class="blank_27" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv (plural, Nominativ)</label><br>
+        
 </div>
 <button id="submit_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Submit</button>
 <button id="showText_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Show/Hide Text</button>
@@ -124,6 +123,7 @@
 <scope id="b26">Staaten</scope> waren. Wir waren immer die 
 <scope id="b27">Vereinigten</scope> Staaten von Amerika und wir werden es auch immer sein.
 </div>
+</div>
 
 <script>
 var blank = [];
@@ -132,19 +132,7 @@ var i = 1;
 var textDisplay = document.getElementById("text")
 var originalText = document.getElementById("original_text")
 
-    var submit = document.getElementById("submit_button")
-    // submit.addEventListener("click", function(event) {
-    //     for (i=1; i<28; i++) {
-    //         blank[i] = document.querySelector(".blank_" + i).value;
-    //         word[i] = document.getElementById("b" + i)
-    //         word[i].innerText = blank[i]
-
-    //     }
-    //     console.log(blank)
-    //     console.log(word)
-
-    // })
-     
+    var submit = document.getElementById("submit_button")     
     submit.addEventListener("click", function(event) {
     while (true) {       
         textDisplay.style.visibility = "visible"
