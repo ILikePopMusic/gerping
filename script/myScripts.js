@@ -11,11 +11,9 @@ var totalWords = 0;
 var wrongWords = [];
 
 function getWord() {
-  var rnd = Math.round(Math.floor(Math.random() * (+max + 1 - +min)) + +min)
-  randomNumber = Number(rnd)
-  newObject = data[randomNumber].B.split(' ') //newObject = [article, noun] or [article, article, noun]
+  var rnd = Number(Math.round(Math.floor(Math.random() * (+max + 1 - +min)) + +min))
+  newObject = data[rnd].B.split(' ') //newObject = [article, noun] or [article, article, noun]
   var testVokabel = document.getElementById("vokabel");
-  var oldText = testVokabel.innerHTML;
   testVokabel.innerHTML = newObject[newObject.length - 1];
 }
 function getStats() {
@@ -42,11 +40,9 @@ else {
 function correctWord() {
       corAns = corAns + 1
       var answer = document.getElementById("correct_answer")
-      var oldAnswer = answer.innerHTML
       answer.innerHTML = corAns;
       var infoFieldCorrect = document.getElementById("correct_old_word")
       var infoFieldWrong = document.getElementById("wrong_old_word")
-      var correctAnswer = infoFieldCorrect.innerHTML;
       if (newObject.length == 3) {
       infoFieldCorrect.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
       infoFieldWrong.innerHTML = " "
@@ -61,11 +57,9 @@ function correctWord() {
 function wrongWord() {
   incorAns = incorAns + 1
   var falseAnswer = document.getElementById("incorrect_answer")
-  var oldfalseAnswer = falseAnswer.innerHTML
   falseAnswer.innerHTML = incorAns;
   var infoFieldWrong = document.getElementById("wrong_old_word")
   var infoFieldCorrect = document.getElementById("correct_old_word")
-  var correctAnswer = infoFieldWrong.innerHTML;
   if (newObject.length == 3) {
     infoFieldWrong.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
     infoFieldCorrect.innerHTML = " "    

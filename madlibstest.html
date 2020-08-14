@@ -17,7 +17,7 @@
       <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;">
           <a style="margin-left: 45px" href="index.html">Home</a>
           <a href="difficulty.html">Gerping</a>
-          <a href="under_construction.html">Play</a>
+          <a href="madlibstest.html">Play</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
           <a href="thank_you.html">Send me Money</a>
@@ -42,6 +42,8 @@
     
 </div>
 <button id="submit_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Submit</button>
+<button id="showText_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Show/Hide Text</button>
+<button id="showOriginal_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Show Original</button>
 </div>
 
 <h1 id="text" style="font-size: 20px; margin-top: 50px; visibility: hidden;">
@@ -55,29 +57,29 @@
     <scope id="b8">die Bewertungen eines neuen Films im Kino</scope>. Sei übrigens unbesorgt. Alle gesammelten Daten sind 
     <scope id="b9">anonym</scope> und werden auf keinen Fall an 
     <scope id="b10">Geheimdienste</scope> weitergeleitet. 
-    Für weitere Fragen über mich, die Daten, die wir über dich Sammeln oder zu Themen, über die wir uns unterhalten können, sag einfach „
-    <scope id="b11">Hilfe</scope>“. Vielen Dank, dass du dich für Siri entschieden hast. Ich hoffe, ich werde dir eine hilfreiche 
+    Für weitere Fragen über mich, die Daten, die wir über dich sammeln oder zu Themen, über die wir uns unterhalten können, sag einfach 
+    „<scope id="b11">Hilfe</scope>“. Vielen Dank, dass du dich für Siri entschieden hast. Ich hoffe, ich werde dir eine hilfreiche 
     <scope id="b12">Assistentin</scope>.
-    </h1>
-
+</h1>
+<h1 id="original_text" style="font-size: 20px; margin-top: 50px; visibility: hidden;">
+    <scope id="b1">Hi</scope>, mein Name ist Siri. Ich bin deine persönliche 
+    <scope id="b2">Assistentin</scope>. Ich freue mich, dass du dich für 
+    <scope id="b3">Apple</scope> entschieden hast. Du kannst mir 
+    <scope id="b4">jederzeit</scope> Fragen zu allen möglichen Themen stellen. Sag einfach „
+    <scope id="b5">Hey</scope>, Siri“ und frag los! Ich informiere dich gerne über 
+    <scope id="b6">das Wetter</scope>, 
+    <scope id="b7">das Ergebnis eines Fußballspiels</scope> oder über
+    <scope id="b8">die Bewertungen eines neuen Films im Kino</scope>. Sei übrigens unbesorgt. Alle gesammelten Daten sind 
+    <scope id="b9">anonym</scope> und werden auf keinen Fall an 
+    <scope id="b10">Geheimdienste</scope> weitergeleitet. 
+    Für weitere Fragen über mich, die Daten, die wir über dich sammeln oder zu Themen, über die wir uns unterhalten können, sag einfach 
+    „<scope id="b11">Hilfe</scope>“. Vielen Dank, dass du dich für Siri entschieden hast. Ich hoffe, ich werde dir eine hilfreiche 
+    <scope id="b12">Assistentin</scope>.</h1>
 </div>
 
-<script>
-    
-    var blank = [];
-    var word = [];
+<script src="script/madlibsScript.js">
 
-        var submit = document.getElementById("submit_button")
-        submit.addEventListener("click", function(event) {
-        for (var i = 1; i < 12 ; i++) {                       
-            blank[i] = document.querySelector(".blank_" + i).value
-            word[i] = document.getElementById("b" + i)
-            word[i].innerText = blank[i]
-            }
-        document.getElementById("text").style.visibility = "visible"
 
-        })
-    
 </script>
 
 
