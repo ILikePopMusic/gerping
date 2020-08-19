@@ -29,8 +29,8 @@
 <div>
     <input class="blank_1" style="margin-top: 10px;"><label style="margin-left: 10px;">Begrüßung</label><br>
     <input class="blank_2" style="margin-top: 10px;"><label style="margin-left: 10px;">Stadt</label><br>
-    <input class="blank_3" style="margin-top: 10px;"><label style="margin-left: 10px;">Lokale Information (Dativ)</label><br>
-    <input class="blank_4" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Nominativ)</label><br>
+    <input class="blank_3" style="margin-top: 10px;"><label style="margin-left: 10px;">Lokale Information (wo?)</label><br>
+    <input class="blank_4" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Nominativ, Neutrum/Maskulin)</label><br>
     <input class="blank_5" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (nominalisiertes Verb mit "en")</label><br>
     <input class="blank_6" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Nominativ)</label><br>
     <input class="blank_7" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
@@ -42,18 +42,21 @@
     <input class="blank_13" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
     <input class="blank_14" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
     <input class="blank_15" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (Possessivartikel 3. Pers. Plural, Dativ)</label><br>
-    <input class="blank_16" style="margin-top: 10px;"><label style="margin-left: 10px;">politische Gruppe (plural, Dativ)</label><br>
-    <input class="blank_17" style="margin-top: 10px;"><label style="margin-left: 10px;">politische Gruppe (plural, Dativ)</label><br>
-    <input class="blank_18" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe als Nomen (plural, Dativ)</label><br>
+    <input class="blank_16" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Nominativ, feminin)</label><br>
+    <input class="blank_17" style="margin-top: 10px;"><label style="margin-left: 10px;">ideologische Gruppe (plural, Dativ)</label><br>
+    <input class="blank_18" style="margin-top: 10px;"><label style="margin-left: 10px;">ideologische Gruppe (plural, Dativ)</label><br>
     <input class="blank_19" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe als Nomen (plural, Dativ)</label><br>
-    <input class="blank_20" style="margin-top: 10px;"><label style="margin-left: 10px;">Minderheit als Nomen (plural, Dativ)</label><br>
+    <input class="blank_20" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe als Nomen (plural, Dativ)</label><br>
     <input class="blank_21" style="margin-top: 10px;"><label style="margin-left: 10px;">Minderheit als Nomen (plural, Dativ)</label><br>
-    <input class="blank_22" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (plural, Dativ)</label><br>
-    <input class="blank_23" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv (plural, Dativ)</label><br>
-    <input class="blank_24" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Akkusativ)</label><br>
-    <input class="blank_25" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural)</label><br>
-    <input class="blank_26" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural)</label><br>
-    <input class="blank_27" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv (plural, Nominativ)</label><br>
+    <input class="blank_22" style="margin-top: 10px;"><label style="margin-left: 10px;">Minderheit als Nomen (plural, Dativ)</label><br>
+    <input class="blank_23" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (plural, Dativ)</label><br>
+    <input class="blank_24" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv (plural, Dativ)</label><br>
+    <input class="blank_25" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv (plural, Dativ)</label><br>
+    <input class="blank_26" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Akkusativ)</label><br>    
+    <input class="blank_27" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural, Dativ)</label><br>
+    <input class="blank_28" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural)</label><br>
+    <input class="blank_29" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv (plural, Nominativ)</label><br>
+    
         
 </div>
 <button id="submit_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Submit</button>
@@ -62,68 +65,69 @@
 </div>
 
 <h1 id="text" style="font-size: 20px; margin-top: 50px; visibility: hidden;">
-<scope id="b1">Hallo</scope> 
-<scope id="b2">Chicago</scope>. Wenn es 
-<scope id="b3">da draußen</scope> jemanden gibt, der noch daran zweifelt, dass die Vereinigten Staaten 
-<scope id="b4">ein Ort</scope> sind, an dem 
-<scope id="b5">alles</scope> möglich ist, der sich noch immer fragt, ob 
-<scope id="b6">der Traum</scope> unserer Gründerväter heute noch 
-<scope id="b7">lebendig</scope> ist, der noch immer 
-<scope id="b8">die Kraft</scope> unserer Demokratie in Frage stellt, hat heute Abend 
-<scope id="b9">eine Antwort</scope> bekommen. Es ist 
-<scope id="b10">die Antwort</scope>, gegeben von den Schlangen wartender Menschen vor 
-<scope id="b11">Schulen</scope> und 
-<scope id="b12">Kirchen</scope>, deren Ausmass diese Nation noch nie erlebt hat, von Menschen, die 
-<scope id="b13">drei</scope> oder 
-<scope id="b14">vier</scope> Stunden warteten, viele zum ersten Mal in 
-<scope id="b15">ihrem Leben</scope>, weil sie glaubten, dass es dieses Mal anders sein muss, dass ihre Stimmen diesen Unterschied ausmachen können. Es ist 
-<scope id="b10">die Antwort</scope>, die von Jungen und Alten, Reichen und Armen, 
-<scope id="b16">Demokraten</scope> und 
-<scope id="b17">Republikanern</scope>, 
-<scope id="b18">Schwarzen</scope>, 
-<scope id="b19">Weißen</scope>, 
-<scope id="b20">Hispaniern</scope>, 
-<scope id="b21">Asiaten</scope>, 
-<scope id="b22">amerikanischen</scope> Ureinwohnern, Homosexuellen, Heterosexuellen, 
-<scope id="b23">Behinderten</scope> und Nicht
-<scope id="b23">behinderten</scope> gegeben wird. Von Amerikanern, die der Welt 
-<scope id="b24">eine Botschaft</scope> geschickt haben, dass wir nämlich niemals nur eine Ansammlung von 
-<scope id="b25">Individuen</scope> oder eine Anhäufung roter und blauer 
-<scope id="b26">Staaten</scope> waren. Wir waren immer die 
-<scope id="b27">Vereinigten</scope> Staaten von Amerika und wir werden es auch immer sein.
+        <scope class="b1">Hallo</scope> 
+        <scope class="b2">Chicago</scope>. Wenn es 
+        <scope class="b3">da draußen</scope> jemanden gibt, der noch daran zweifelt, dass die Vereinigten Staaten 
+        <scope class="b4">ein Ort</scope> sind, an dem 
+        <scope class="b5">alles</scope> möglich ist, der sich noch immer fragt, ob 
+        <scope class="b6">der Traum</scope> unserer Gründerväter heute noch 
+        <scope class="b7">lebendig</scope> ist, der noch immer 
+        <scope class="b8">die Kraft</scope> unserer Demokratie in Frage stellt, hat heute Abend 
+        <scope class="b9">eine Antwort</scope> bekommen. Es ist 
+        <scope class="b10">die Antwort</scope>, gegeben von den Schlangen wartender Menschen vor 
+        <scope class="b11">Schulen</scope> und 
+        <scope class="b12">Kirchen</scope>, deren Ausmass diese Nation noch nie erlebt hat, von Menschen, die 
+        <scope class="b13">drei</scope> oder 
+        <scope class="b14">vier</scope> Stunden warteten, viele zum ersten Mal in 
+        <scope class="b15">ihrem Leben</scope>, weil sie glaubten, dass es dieses Mal anders sein muss, dass ihre Stimmen diesen Unterschied ausmachen können. Es ist 
+        <scope class="b16">die Antwort</scope>, die von Jungen und Alten, Reichen und Armen, 
+        <scope class="b17">Demokraten</scope> und 
+        <scope class="b18">Republikanern</scope>, 
+        <scope class="b19">Schwarzen</scope>, 
+        <scope class="b20">Weißen</scope>, 
+        <scope class="b21">Hispaniern</scope>, 
+        <scope class="b22">Asiaten</scope>, 
+        <scope class="b23">amerikanischen</scope> Ureinwohnern, Homosexuellen, Heterosexuellen, 
+        <scope class="b24">Behinderten</scope> und nicht
+        <scope class="b25">behinderten</scope> gegeben wird. Von Amerikanern, die der Welt 
+        <scope class="b26">eine Botschaft</scope> geschickt haben, dass wir nämlich niemals nur eine Ansammlung von 
+        <scope class="b27">Individuen</scope> oder eine Anhäufung roter und blauer 
+        <scope class="b28">Staaten</scope> waren. Wir waren immer die 
+        <scope class="b29">Vereinigten</scope> Staaten von Amerika und wir werden es auch immer sein.
 </h1>
 <h1 id="original_text" style="font-size: 20px; margin-top: 50px; visibility: hidden;">
-<scope id="b1">Hallo</scope> 
-<scope id="b2">Chicago</scope>. Wenn es 
-<scope id="b3">da draußen</scope> jemanden gibt, der noch daran zweifelt, dass die Vereinigten Staaten 
-<scope id="b4">ein Ort</scope> sind, an dem 
-<scope id="b5">alles</scope> möglich ist, der sich noch immer fragt, ob 
-<scope id="b6">der Traum</scope> unserer Gründerväter heute noch 
-<scope id="b7">lebendig</scope> ist, der noch immer 
-<scope id="b8">die Kraft</scope> unserer Demokratie in Frage stellt, hat heute Abend 
-<scope id="b9">eine Antwort</scope> bekommen. Es ist 
-<scope id="b10">die Antwort</scope>, gegeben von den Schlangen wartender Menschen vor 
-<scope id="b11">Schulen</scope> und 
-<scope id="b12">Kirchen</scope>, deren Ausmass diese Nation noch nie erlebt hat, von Menschen, die 
-<scope id="b13">drei</scope> oder 
-<scope id="b14">vier</scope> Stunden warteten, viele zum ersten Mal in 
-<scope id="b15">ihrem Leben</scope>, weil sie glaubten, dass es dieses Mal anders sein muss, dass ihre Stimmen diesen Unterschied ausmachen können. Es ist 
-<scope id="b10">die Antwort</scope>, die von Jungen und Alten, Reichen und Armen, 
-<scope id="b16">Demokraten</scope> und 
-<scope id="b17">Republikanern</scope>, 
-<scope id="b18">Schwarzen</scope>, 
-<scope id="b19">Weißen</scope>, 
-<scope id="b20">Hispaniern</scope>, 
-<scope id="b21">Asiaten</scope>, 
-<scope id="b22">amerikanischen</scope> Ureinwohnern, Homosexuellen, Heterosexuellen, 
-<scope id="b23">Behinderten</scope> und Nicht
-<scope id="b23">behinderten</scope> gegeben wird. Von Amerikanern, die der Welt 
-<scope id="b24">eine Botschaft</scope> geschickt haben, dass wir nämlich niemals nur eine Ansammlung von 
-<scope id="b25">Individuen</scope> oder eine Anhäufung roter und blauer 
-<scope id="b26">Staaten</scope> waren. Wir waren immer die 
-<scope id="b27">Vereinigten</scope> Staaten von Amerika und wir werden es auch immer sein.
+        <scope class="b1">Hallo</scope> 
+        <scope class="b2">Chicago</scope>. Wenn es 
+        <scope class="b3">da draußen</scope> jemanden gibt, der noch daran zweifelt, dass die Vereinigten Staaten 
+        <scope class="b4">ein Ort</scope> sind, an dem 
+        <scope class="b5">alles</scope> möglich ist, der sich noch immer fragt, ob 
+        <scope class="b6">der Traum</scope> unserer Gründerväter heute noch 
+        <scope class="b7">lebendig</scope> ist, der noch immer 
+        <scope class="b8">die Kraft</scope> unserer Demokratie in Frage stellt, hat heute Abend 
+        <scope class="b9">eine Antwort</scope> bekommen. Es ist 
+        <scope class="b10">die Antwort</scope>, gegeben von den Schlangen wartender Menschen vor 
+        <scope class="b11">Schulen</scope> und 
+        <scope class="b12">Kirchen</scope>, deren Ausmass diese Nation noch nie erlebt hat, von Menschen, die 
+        <scope class="b13">drei</scope> oder 
+        <scope class="b14">vier</scope> Stunden warteten, viele zum ersten Mal in 
+        <scope class="b15">ihrem Leben</scope>, weil sie glaubten, dass es dieses Mal anders sein muss, dass ihre Stimmen diesen Unterschied ausmachen können. Es ist 
+        <scope class="b16">die Antwort</scope>, die von Jungen und Alten, Reichen und Armen, 
+        <scope class="b17">Demokraten</scope> und 
+        <scope class="b18">Republikanern</scope>, 
+        <scope class="b19">Schwarzen</scope>, 
+        <scope class="b20">Weißen</scope>, 
+        <scope class="b21">Hispaniern</scope>, 
+        <scope class="b22">Asiaten</scope>, 
+        <scope class="b23">amerikanischen</scope> Ureinwohnern, Homosexuellen, Heterosexuellen, 
+        <scope class="b24">Behinderten</scope> und nicht
+        <scope class="b25">behinderten</scope> gegeben wird. Von Amerikanern, die der Welt 
+        <scope class="b26">eine Botschaft</scope> geschickt haben, dass wir nämlich niemals nur eine Ansammlung von 
+        <scope class="b27">Individuen</scope> oder eine Anhäufung roter und blauer 
+        <scope class="b28">Staaten</scope> waren. Wir waren immer die 
+        <scope class="b29">Vereinigten</scope> Staaten von Amerika und wir werden es auch immer sein.
+</h1>
 </div>
-</div>
+
 
 <script>
 var blank = [];
@@ -135,15 +139,16 @@ var originalText = document.getElementById("original_text")
     var submit = document.getElementById("submit_button")     
     submit.addEventListener("click", function(event) {
     while (true) {       
-        textDisplay.style.visibility = "visible"
+        
         if (document.querySelector(".blank_" + i) == null) {
             console.log("document null")
             break;
         }               
         blank[i] = document.querySelector(".blank_" + i).value
-        word[i] = document.getElementById("b" + i)
+        word[i] = document.querySelector(".b" + i)
         word[i].innerText = blank[i]
         i = i + 1;
+        textDisplay.style.visibility = "visible"
         }        
     i = 1;
     })
@@ -162,7 +167,8 @@ var originalText = document.getElementById("original_text")
     var showOriginal = document.getElementById("showOriginal_button")
     showOriginal.addEventListener("click", function(event) {
         originalText.style.visibility = "visible"
-        textDisplay.innerHTML = originalText.innerHTML
+        textDisplay.style.visibility = "visible"
+        textDisplay.innerHTML = originalText.innerHTML        
         originalText.style.visibility = "hidden"
         })
 

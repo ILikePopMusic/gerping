@@ -1,3 +1,5 @@
+
+
 const derBtn = document.getElementById("der")
 const dieBtn = document.getElementById("die")
 const dasBtn = document.getElementById("das")
@@ -102,4 +104,8 @@ wordsBtn.addEventListener('click', function(event) {
  list.innerHTML = wrongWords
 })
 
-getWord() //start the function
+getWord()
+
+
+
+
