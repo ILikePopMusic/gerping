@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+<head>
+
+    <title>Mad Libs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/madlibsScript.js"></script>
+
+</head>
+
+
+<body >
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/css_sheet.css"> 
+
+<div class="background">
+      <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
+      <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;">
+          <a style="margin-left: 45px" href="index.html">Home</a>
+          <a href="../difficulty.html">Gerping</a>
+          <a href="..//play.html">Play</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../thank_you.html">Send me Money</a>
+    </h1>  
+</div>
+<div class="game_box" style="margin-left: 150px; margin-top: 50px;">
+<h1>Eine Nationalhymne</h1>
+
+<div>
+    <h3 id="blank_error" style="color: red; font-size: 15px; visibility: hidden;">Please fill in all the blanks</h1>
+    <input class="blank_1" style="margin-top: 10px;"><label style="margin-left: 10px;">Wert (etwas, was man im Leben wichtig findet)</label><br>
+    <input class="blank_2" style="margin-top: 10px;"><label style="margin-left: 10px;">Wert (etwas, was man im Leben wichtig findet)</label><br>
+    <input class="blank_3" style="margin-top: 10px;"><label style="margin-left: 10px;">Wert (etwas, was man im Leben wichtig findet)</label><br>
+    <input class="blank_4" style="margin-top: 10px;"><label style="margin-left: 10px;">Nationalität als Adjektiv</label><br>
+    <input class="blank_5" style="margin-top: 10px;"><label style="margin-left: 10px;">Inneres Organ (ohne Artikel)</label><br>
+    <input class="blank_6" style="margin-top: 10px;"><label style="margin-left: 10px;">Körperteil (ohne Artikel)</label><br>
+    <input class="blank_7" style="margin-top: 10px;"><label style="margin-left: 10px;">Verb (1. Person, Imperativ)</label><br>       
+        
+</div>
+<button id="submit_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Submit</button>
+<button id="showText_button" style="font-size: 20px; padding: 15px; margin-top: 50px; visibility: hidden;">Show/Hide Text</button>
+<button id="showOriginal_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Show Original</button>
+</div>
+
+<div id="first_text" style="max-width: 500px; float: left; font-size: 20px;">
+<h1 class="text" id="7" style="font-size: 18px; margin-top: 50px; visibility: hidden; text-align: justify;">
+    Die <scope class="b4">deutsch</scope>e Nationalhymne<br><br>
+    <scope class="b1">Einigkeit</scope> und 
+    <scope class="b2">Recht</scope> und 
+    <scope class="b3">Freiheit</scope><br>Für das 
+    <scope class="b4">deutsch</scope>e Vaterland!<br>Danach lasst uns alle streben<br> Brüderlich mit 
+    <scope class="b5">Herz</scope> und 
+    <scope class="b6">Hand</scope>!<br>
+    <scope class="b1">Einigkeit</scope> und 
+    <scope class="b2">Recht</scope> und 
+    <scope class="b3">Freiheit</scope><br>Sind des Glückes Unterpfand;<br>
+    <scope class="b7">Blüh'</scope> im Glanze dieses Glückes,<br>
+    <scope class="b7">Blühe</scope>, <scope class="b4">deutsch</scope>es Vaterland!<br>
+</h1>
+</div>
+
+<div style="max-width: 600px; float: right; margin-right: 200px; ">
+<h1 id="original_text" style="font-size: 18px; text-align: justify; margin-top: 50px; visibility: hidden;">
+Die deutsche Nationalhymne<br><br>
+
+Einigkeit und Recht und Freiheit<br>
+Für das deutsche Vaterland!<br>
+Danach lasst uns alle streben<br>
+Brüderlich mit Herz und Hand!<br>
+Einigkeit und Recht und Freiheit<br>
+Sind des Glückes Unterpfand;<br>
+Blüh' im Glanze dieses Glückes,<br>
+Blühe, deutsches Vaterland!<br>
+
+</h1>
+</div>
+</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-
+$( document ).ready(function() {
 
 const derBtn = document.getElementById("der")
 const dieBtn = document.getElementById("die")
@@ -106,6 +106,6 @@ wordsBtn.addEventListener('click', function(event) {
 
 getWord()
 
-
+});
 
 

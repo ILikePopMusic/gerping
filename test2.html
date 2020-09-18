@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+<head>
+
+    <title>Mad Libs</title>
+
+</head>
+
+
+<body >
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
+
+<div class="background">
+      <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
+      <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;">
+          <a style="margin-left: 45px" href="index.html">Home</a>
+          <a href="difficulty.html">Gerping</a>
+          <a href="play.html">Play</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="thank_you.html">Send me Money</a>
+    </h1>  
+</div>
+<div class="game_box" style="margin-left: 150px; margin-top: 50px;">
+<h1>Obamas Rede (kurz)</h1>
+
+<div>
+    <input class="blank_1" style="margin-top: 10px;"><label style="margin-left: 10px;">Begrüßung</label><br>
+    <input class="blank_2" style="margin-top: 10px;"><label style="margin-left: 10px;">Stadt</label><br>
+    <input class="blank_3" style="margin-top: 10px;"><label style="margin-left: 10px;">Lokale Information (wo?)</label><br>
+    <input class="blank_4" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Nominativ, Neutrum/Maskulin)</label><br>
+    <input class="blank_5" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (nominalisiertes Verb mit "en")</label><br>
+    <input class="blank_6" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Nominativ)</label><br>
+    <input class="blank_7" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
+    <input class="blank_8" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Akkusativ)</label><br>
+    <input class="blank_9" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Akkusativ)</label><br>
+    <input class="blank_10" style="margin-top: 10px;"><label style="margin-left: 10px;">gleiches Nomen wie letztes Wort (best. Artikel, Nominativ)</label><br>
+    <input class="blank_11" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort in einer Stadt (Plural)</label><br>
+    <input class="blank_12" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort in einer Stadt (Plural)</label><br>
+    <input class="blank_13" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
+    <input class="blank_14" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
+    <input class="blank_15" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (Possessivartikel 3. Pers. Plural, Dativ)</label><br>
+    <input class="blank_16" style="margin-top: 10px;"><label style="margin-left: 10px;">ideologische Gruppe (plural, Dativ)</label><br>
+    <input class="blank_17" style="margin-top: 10px;"><label style="margin-left: 10px;">ideologische Gruppe (plural, Dativ)</label><br>
+    <input class="blank_18" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe als Nomen (plural, Dativ)</label><br>
+    <input class="blank_19" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe als Nomen (plural, Dativ)</label><br>
+    <input class="blank_20" style="margin-top: 10px;"><label style="margin-left: 10px;">Minderheit als Nomen (plural, Dativ)</label><br>
+    <input class="blank_21" style="margin-top: 10px;"><label style="margin-left: 10px;">Minderheit als Nomen (plural, Dativ)</label><br>
+    <input class="blank_22" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (plural, Dativ)</label><br>
+    <input class="blank_23" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv (plural, Dativ)</label><br>
+    <input class="blank_24" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Akkusativ)</label><br>    
+    <input class="blank_25" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural, Dativ)</label><br>
+    <input class="blank_26" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural)</label><br>
+    <input class="blank_27" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv (plural, Nominativ)</label><br>
+    
+        
+</div>
+<button id="submit_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Submit</button>
+<button id="showText_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Show/Hide Text</button>
+<button id="showOriginal_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Show Original</button>
+</div>
+
+<div id="first_text"></div>
+<h1 id="text" style="font-size: 20px; margin-top: 50px; visibility: hidden;">
+        <scope class="b1">Hallo</scope> 
+        <scope class="b2">Chicago</scope>. Wenn es 
+        <scope class="b3">da draußen</scope> jemanden gibt, der noch daran zweifelt, dass die Vereinigten Staaten 
+        <scope class="b4">ein Ort</scope> sind, an dem 
+        <scope class="b5">alles</scope> möglich ist, der sich noch immer fragt, ob 
+        <scope class="b6">der Traum</scope> unserer Gründerväter heute noch 
+        <scope class="b7">lebendig</scope> ist, der noch immer 
+        <scope class="b8">die Kraft</scope> unserer Demokratie in Frage stellt, hat heute Abend 
+        <scope class="b9">eine Antwort</scope> bekommen. Es ist 
+        <scope class="b10">die Antwort</scope>, gegeben von den Schlangen wartender Menschen vor 
+        <scope class="b11">Schulen</scope> und 
+        <scope class="b12">Kirchen</scope>, deren Ausmass diese Nation noch nie erlebt hat, von Menschen, die 
+        <scope class="b13">drei</scope> oder 
+        <scope class="b14">vier</scope> Stunden warteten, viele zum ersten Mal in 
+        <scope class="b15">ihrem Leben</scope>, weil sie glaubten, dass es dieses Mal anders sein muss, dass ihre Stimmen diesen Unterschied ausmachen können. Es ist 
+        <scope class="b10">die Antwort</scope>, die von Jungen und Alten, Reichen und Armen, 
+        <scope class="b16">Demokraten</scope> und 
+        <scope class="b17">Republikanern</scope>, 
+        <scope class="b18">Schwarzen</scope>, 
+        <scope class="b19">Weißen</scope>, 
+        <scope class="b20">Hispaniern</scope>, 
+        <scope class="b21">Asiaten</scope>, 
+        <scope class="b22">amerikanischen</scope> Ureinwohnern, Homosexuellen, Heterosexuellen, 
+        <scope class="b23">Behinderten</scope> und nicht
+        <scope class="b23">behinderten</scope> gegeben wird. Von Amerikanern, die der Welt 
+        <scope class="b24">eine Botschaft</scope> geschickt haben, dass wir nämlich niemals nur eine Ansammlung von 
+        <scope class="b25">Individuen</scope> oder eine Anhäufung roter und blauer 
+        <scope class="b26">Staaten</scope> waren. Wir waren immer die 
+        <scope class="b27">Vereinigten</scope> Staaten von Amerika und wir werden es auch immer sein.
+</h1>
+</div>
+<h1 id="original_text" style="font-size: 20px; margin-top: 50px; visibility: hidden;">
+    Hallo Chicago. Wenn es da draussen jemanden gibt, der noch daran zweifelt, dass die Vereinigten Staaten ein Ort sind, an dem alles möglich ist,
+    der sich noch immer fragt, ob der Traum unserer Gründerväter heute noch lebendig ist, der noch immer die Kraft unserer Demokratie in Frage stellt,
+    hat heute Abend eine Antwort bekommen. Es ist die Antwort, gegeben von den Schlangen wartender Menschen vor Schulen und Kirchen, deren Ausmass
+    diese Nation noch nie erlebt hat, von Menschen, die drei oder vier Stunden warteten, viele zum ersten Mal in ihrem Leben, weil sie glaubten,
+    dass es dieses Mal anders sein muss, dass ihre Stimmen diesen Unterschied ausmachen können. Es ist die Antwort, die von Jungen und Alten, Reichen
+    und Armen, Demokraten und Republikanern, Schwarzen, Weissen, Hispaniern, Asiaten, amerikanischen Ureinwohnern, Homosexuellen, Heterosexuellen,
+    Behinderten und Nichtbehinderten gegeben wird. Von Amerikanern, die der Welt eine Botschaft geschickt haben, dass wir nämlich niemals nur eine
+    Ansammlung von Individuen oder eine Anhäufung roter und blauer Staaten waren. Wir waren immer die Vereinigten Staaten von Amerika und wir werden
+    es auch immer sein.
+</h1>
+</div>
+
+
+<script>
+var firstText = document.getElementById("first_text")
+var textDisplay = document.getElementById("text")
+var originalText = document.getElementById("original_text")
+var i = 1;
+var input = []
+var blank = []
+var submit = document.getElementById("submit_button")
+submit.addEventListener("click", function(event) {
+    textDisplay.style.visibility = "visible"
+    for (i=1; i<30; i++) {               
+        input[i] = document.querySelector(".blank_" + i).value 
+        blank[i] = document.querySelectorAll(".b" + i)
+        blank[i].forEach(
+            function(node, index) {
+            node.innerText = input[i]                    
+            })
+    }
+})
+
+    var showButton = document.getElementById("showText_button")
+    showButton.addEventListener("click", function(event) {
+        
+        if (textDisplay.style.visibility == "hidden") {
+            textDisplay.style.visibility = "visible"
+        }
+        else {
+            textDisplay.style.visibility = "hidden"
+        }
+    })
+
+    var showOriginal = document.getElementById("showOriginal_button")
+    showOriginal.addEventListener("click", function(event) {
+        originalText.style.visibility = "visible"
+        textDisplay.innerText = originalText.innerText;
+        originalText.style.visibility = "hidden"
+        })
+
+</script>
+
+
+
+</body>
+</html>
