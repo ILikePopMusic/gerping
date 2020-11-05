@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+<head>
+    <title>Practice German!</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/menuScript.js"></script>
+
+</head>
+<body >
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
+
+    <div class="background" style="height: 100%;">
+        <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; ">
+            <div style="margin-top: 0px;">
+            <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 42px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+            <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
+            <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
+            <img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png">
+            <a href="#" style="margin-left: 280px; font-size: 20px;" onclick="backEndInfo()">login</a>
+            <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
+            <div class="working_backend" id="working_backend">
+            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
+            </div>
+            <div id="cross_line" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 42px;"></div>
+            </div>
+            <div id="mySidenav"class="sidenav">
+            <div style="background-color: #3b3b3b; width: 2px; height: 270px; float: right; margin-top: 30px;"></div>
+            <div id="sidebar_content" style="margin-top: 20px;">
+            <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
+            <a href="index.html">Home</a>
+        <a href="gerping.html">Gerping</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="thank_you.html">Donate</a>
+            </div>
+        </div>
+        </div>
+        
+        <div class="gerping_links">
+        <h1 style="margin-left: 50px; padding-top: 50px; font-size: 25px;">Gerping</h1>
+        <a href="#" onclick="openGerpNav()"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left;">articles</h2></a>
+        <a href="#"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left; color: grey;">verb conjugation</h2></a>
+        <a href="#"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left; color: grey;">adjective declination</h2></a>
+        <a href="#"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left; color: grey;">numbers</h2></a>
+        <a href="#" onclick="openMadNav()"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left;">mad libs</h2></a>
+        </div>
+        <div id="gerping_nav" class="gerping_nav">
+        <div id="vertical_line_gerping" class="vertical_line_gerping"></div>
+        
+        <div id="gerping_nav_content" class="gerping_nav_content" >      
+            <a href="#" style="margin-left: 15px;" onclick="closeGerpNav()"><img style="max-height: 20px;" src="img/arrow_right.png"></a>            
+            <a href="practice_a1.html">a1</a>
+            <a href="practice_a2.html">a2</a>
+            <a href="practice_b1.html">b1</a>
+            <a href="practice_everything.html">everything</a>
+        </div>
+    </div>
+        <div id="madlibs_nav" class="madlibs_nav">
+        <div id="vertical_line_madlibs" class="vertical_line_madlibs"></div>
+
+        <div id="madlibs_nav_content" class="madlibs_nav_content" style="background-color: white; padding: 0px; margin-left: 5px;">
+            <a href="#" style="margin-left: 15px;" onclick="closeMadNav()"><img style="max-height: 20px;" src="img/arrow_right.png"></a>            
+            <a href="virtual_assistant.html">an introduction</a>
+            <a href="erlkoenig.html">a poem</a>
+            <a href="obama_short.html">a speech</a>
+            <a href="anthem.html">a song</a>
+            <a href="#" onclick="howToPlay()">how to play</a>
+        </div>
+               
+        </div>
+
+        <div id="how_to_play" class="how_to_play">
+            <h2 style="font-size: 15px; text-align: justify;">So this is a German version of the game Mad Libs (the pen and paper version).<br><br>
+                If you're not familiar with Mad Libs:<br>
+                You are asked to name different types of words (noun, adjective, etc.). Those will then be added into a text, of which you don't know the context.
+                Depending on your answers, your willingness to say "stupid" or "crazy" words, the text will turn out different from the original and often very funny.<br><br>
+                "So why is this game on a website, that is all about learning German?", I hear you asking! Well as you may know, the English language is extremely simple
+                in certain respects. For example, there are no genders (articles), the cases (accusative, nominative, etc.) don't matter much and there is no declination of adjectives.
+                So if I ask you to give me an adjective, I don't have to manipulate it to make it work in a sentence. It always works.<br>
+                But not in German. In order to make these texts work, you will not only be asked to add different kinds of words into the text but also to perform certain grammatical
+                manipulations to said words in order to produce a grammatically correct text.<br><br>
+                In line with the theme of this website, this will hopefully help you to brute force German grammar into your brain! So go ahead and click on one of the links.<br><br> Good luck!
+            </h2>
+        </div>
+
+
+</div>
+
+</body>

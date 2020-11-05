@@ -10,6 +10,7 @@ var maxNmbr = Number(document.querySelector(".text").id)                //Id is 
 var showButton = document.getElementById("showText_button")
 var showOriginal = document.getElementById("showOriginal_button")
 
+originalText.style.visibility = "hidden";
 var submit = document.getElementById("submit_button")
 submit.addEventListener("click", function(event) {
     textDisplay.style.visibility = "visible"

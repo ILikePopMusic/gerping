@@ -3,60 +3,77 @@
     <meta charset="UTF-8">
 <head>
 
-    <title>Mad Libs</title>
+    <title>Practice German!</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/menuScript.js"></script>
     <script src="script/madlibsScript.js"></script>
 
 </head>
 
 
 <body >
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
 
-<div class="background">
-      <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
-      <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;">
-          <a style="margin-left: 45px" href="index.html">Home</a>
-          <a href="difficulty.html">Gerping</a>
-          <a href="play.html">Play</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
-          <a href="thank_you.html">Send me Money</a>
-    </h1>  
-</div>
-<div class="game_box" style="margin-left: 150px; margin-top: 50px;">
-<h1>Obamas Rede (kurz)</h1>
+<div class="background" style="height: 100%;">
+    <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; height: auto; margin: auto; ">
+        <div class="top_bar" style="margin-top: 0px;">
+        <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 50px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+        <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
+        <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
+        <img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png">
+        <a href="#" style="margin-left: 280px; font-size: 20px;" onclick="backEndInfo()">login</a>
+        <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
+        <div class="working_backend" id="working_backend">
+            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
+        </div>
+        <div id="cross_line" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 50px;"></div>
+        </div>
+        <div id="mySidenav"class="sidenav">
+        <div style="background-color: #3b3b3b; width: 2px; height: 270px; float: right; margin-top: 30px;"></div>
+        <div id="sidebar_content" style="margin-top: 20px;">
+        <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
+        <a href="index.html">Home</a>
+        <a href="gerping.html">Gerping</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="thank_you.html">Donate</a>
+        </div>
+    </div>
+    </div>
+<div class="game_box">
+<h1 style="font-size: 25px; margin-top: 50px;">Eine Rede</h1>
 
 <div>
-    <h3 id="blank_error" style="color: red; font-size: 15px; visibility: hidden;">Please fill in all the blanks</h1>
-    <input class="blank_1" style="margin-top: 10px;"><label style="margin-left: 10px;">Begrüßung</label><br>
-    <input class="blank_2" style="margin-top: 10px;"><label style="margin-left: 10px;">Stadt</label><br>
-    <input class="blank_3" style="margin-top: 10px;"><label style="margin-left: 10px;">Lokale Information (wo?)</label><br>
-    <input class="blank_4" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Nominativ)</label><br>
-    <input class="blank_5" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, verbalisiertes Nomen mit "en")</label><br>
-    <input class="blank_6" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Nominativ)</label><br>
-    <input class="blank_7" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
-    <input class="blank_8" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Akkusativ)</label><br>
-    <input class="blank_9" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, feminin)</label><br>    
-    <input class="blank_10" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort in einer Stadt (Plural)</label><br>
-    <input class="blank_11" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort in einer Stadt (Plural)</label><br>
-    <input class="blank_12" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
-    <input class="blank_13" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
-    <input class="blank_14" style="margin-top: 10px;"><label style="margin-left: 10px;">Zeitperiode (Dativ)</label><br>
-    <input class="blank_15" style="margin-top: 10px;"><label style="margin-left: 10px;">ideologische Gruppe (plural, Dativ)</label><br>
-    <input class="blank_16" style="margin-top: 10px;"><label style="margin-left: 10px;">ideologische Gruppe (plural, Dativ)</label><br>
-    <input class="blank_17" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe</label><br>
-    <input class="blank_18" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe</label><br>
-    <input class="blank_19" style="margin-top: 10px;"><label style="margin-left: 10px;">Minderheit als Nomen (plural, Dativ)</label><br>
-    <input class="blank_20" style="margin-top: 10px;"><label style="margin-left: 10px;">Minderheit als Nomen (plural, Dativ)</label><br>
-    <input class="blank_21" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (plural, Dativ)</label><br>
-    <input class="blank_22" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv</label><br>
-    <input class="blank_23" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Akkusativ)</label><br>    
-    <input class="blank_24" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural, Dativ)</label><br>
-    <input class="blank_25" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural)</label><br>
-    <input class="blank_26" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv</label><br>
-    
+    <h3 id="blank_error" style="color: red; font-size: 15px; visibility: hidden; margin-bottom: 5px;">Please fill in all the blanks</h1>
+        <input class="blank_1" style="margin-top: 10px;"><label style="margin-left: 10px;">Begrüßung</label><br>
+        <input class="blank_2" style="margin-top: 10px;"><label style="margin-left: 10px;">Stadt</label><br>
+        <input class="blank_3" style="margin-top: 10px;"><label style="margin-left: 10px;">Lokale Information (wo?)</label><br>
+        <input class="blank_4" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Nominativ)</label><br>
+        <input class="blank_5" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, verbalisiertes Nomen mit "en")</label><br>
+        <input class="blank_6" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Nominativ)</label><br>
+        <input class="blank_7" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
+        <input class="blank_8" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Akkusativ)</label><br>
+        <input class="blank_9" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, feminin)</label><br>    
+        <input class="blank_10" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort in einer Stadt (Plural)</label><br>
+        <input class="blank_11" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort in einer Stadt (Plural)</label><br>
+        <input class="blank_12" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
+        <input class="blank_13" style="margin-top: 10px;"><label style="margin-left: 10px;">Zahl</label><br>
+        <input class="blank_14" style="margin-top: 10px;"><label style="margin-left: 10px;">Zeitperiode (Dativ)</label><br>
+        <input class="blank_15" style="margin-top: 10px;"><label style="margin-left: 10px;">ideologische Gruppe (plural, Dativ)</label><br>
+        <input class="blank_16" style="margin-top: 10px;"><label style="margin-left: 10px;">ideologische Gruppe (plural, Dativ)</label><br>
+        <input class="blank_17" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe</label><br>
+        <input class="blank_18" style="margin-top: 10px;"><label style="margin-left: 10px;">Farbe</label><br>
+        <input class="blank_19" style="margin-top: 10px;"><label style="margin-left: 10px;">Minderheit als Nomen (plural, Dativ)</label><br>
+        <input class="blank_20" style="margin-top: 10px;"><label style="margin-left: 10px;">Minderheit als Nomen (plural, Dativ)</label><br>
+        <input class="blank_21" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (plural, Dativ)</label><br>
+        <input class="blank_22" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv</label><br>
+        <input class="blank_23" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Akkusativ)</label><br>    
+        <input class="blank_24" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural, Dativ)</label><br>
+        <input class="blank_25" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (ohne Artikel, plural)</label><br>
+        <input class="blank_26" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip II als Adjektiv</label><br>   
         
 </div>
 <button id="submit_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Submit</button>
@@ -64,8 +81,8 @@
 <button id="showOriginal_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Show Original</button>
 </div>
 
-<div id="first_text" style="max-width: 500px; float: left; font-size: 20px; margin-right: 100px;">
-<h1 class="text" id="26" style="font-size: 18px; margin-top: 50px; visibility: hidden; text-align: justify;">
+<div id="first_text_box" style="max-width: 400px; float: left; font-size: 20px;">
+<h1 class="text" class="text" id="7">
         <scope class="b1">Hallo</scope> 
         <scope class="b2">Chicago</scope>. Wenn es 
         <scope class="b3">da draußen</scope> jemanden gibt, der noch daran zweifelt, dass die Vereinigten Staaten 
@@ -98,8 +115,8 @@
 </h1>
 </div>
 
-<div style="max-width: 600px; float: right; ">
-<h1 id="original_text" style="font-size: 18px; text-align: justify; margin-top: 50px; visibility: hidden;">
+<div class="original_text_box" style="max-width: 400px; float: right; margin-right: auto; ">
+<h1 id="original_text" class="original_text">
     Hallo Chicago. Wenn es da draußen jemanden gibt, der noch daran zweifelt, dass die Vereinigten Staaten ein Ort sind, wo alles möglich ist,
     der sich noch immer fragt, ob der Traum unserer Gründerväter heute noch lebendig ist, der noch immer die Kraft unserer Demokratie in Frage stellt,
     hat heute Abend eine Antwort bekommen. Es ist die Antwort, gegeben von den Schlangen wartender Menschen vor Schulen und Kirchen, deren Ausmass

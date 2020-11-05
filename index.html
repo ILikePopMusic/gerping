@@ -3,35 +3,50 @@
     <meta charset="UTF-8">
 <head>
     <title>Practice German!</title>
-
-
-
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/menuScript.js"></script>
 </head>
-<body >
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> -->
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
     
 
 <div class="background">
-    <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
-    <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;"> <!-- Links -->
-        <a style="margin-left: 45px" href="index.html">Home</a>
-        <a href="difficulty.html">Gerping</a>
-        <a href="play.html">Play</a>
+    <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; height: auto; margin: auto; ">
+        <div class="top_bar" style="margin-top: 0px;">
+        <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 50px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+        <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
+        <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
+        <img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png">
+        <a href="#" style="margin-left: 280px; font-size: 20px;" onclick="backEndInfo()">login</a>
+        <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
+        <div class="working_backend" id="working_backend">
+            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
+        </div>
+        <div id="cross_line" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 50px;"></div>
+        </div>
+        <div id="mySidenav"class="sidenav">
+        <div style="background-color: #3b3b3b; width: 2px; height: 270px; float: right; margin-top: 30px;"></div>
+        <div id="sidebar_content" style="margin-top: 20px;">
+        <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
+        <a href="index.html">Home</a>
+        <a href="gerping.html">Gerping</a>
+        <a href="grammar.html">Grammar</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
-        <a href="thank_you.html">Send me Money</a>
-    </h1>  
-</div>
-<div class="box_for_comics" style="margin-top: 50px; margin-left: auto; margin-right: auto; height: 1000px; width: 1000px; background-color: white; display: block;">
-    
+        <a href="thank_you.html">Donate</a>
+        </div>
+    </div>
+    </div>
+    <div class="box_for_comics" style="float: top; margin-top: 50px; margin-left: auto; padding: 0px; margin-right: auto; height: 1000px; width: 1000px; background-color: white; display: block;">
+        
         <div class="first_comic" style="margin-left: auto; margin-right: auto; height: 500px; width: 900px; background-color: white; display: block;">
             <img style="max-height: 550px; margin-left: 50px;" src="img/whatsthearticle.png">
-            <h1 style="float: right; margin-top: 200px; margin-right: 80px; font-size: 25px; color: #636363;">Are you <u>sick</u> of not knowing<br>the article to<br>random German words?</h1>
+            <h1 style="float: right; float: top; margin-top: 200px; margin-right: 80px; font-size: 25px; color: #636363;">Are you sick of not knowing<br>the articles to random<br>German words?</h1>
         </div>
         <div class="second_comic" style="margin-left: auto; margin-right: auto; height: 300px; width: 900px; background-color: white; display: block;">
-            <h1 style="float: left; margin-top: 150px; margin-left: 80px; font-size: 25px; color: #636363;">Come join <u>thousands*</u><br>of satisfied students and<br>start Gerping!</h1>
+            <h1 style="float: left; margin-top: 150px; margin-left: 80px; font-size: 25px; color: #636363;">Come join thousands*<br>of satisfied students and<br>start Gerping!</h1>
             <img style="max-height: 550px; margin-left: 150px;" src="img/whatchadoin.png">
         </div>
         <div style="height: 300px; margin-top: 100px;">
@@ -52,21 +67,27 @@
             
         </div>
 
-        <div><p style="margin-left: 50px;">*Not actually thousands. That's just "Marketing", I think. Or just a lie.</p></div>
+        <div><p style="margin-left: 50px; color: #3b3b3b">*A few thousand requests to the site recorded during the first couple months, by only a handfull of students.</p></div>
 
         
     
     
     </div>   
-
+    
 
 </div>
 
 
-<script>
+<div id="copyright_info" style="background-color: #3b3b3b; width: 100%; height: 100px; padding: 0px; bottom: 0; margin-top: 470px;">
+<h2 style="font-size: 20px; text-align: right; margin-right: 250px; padding: 35px; color: white;">gerping.com &#169 All rights reserved. Copyright 2019 </h2>
+</div>
 
-</script>
+
 
 
 </body>
+<footer>
+
+
+</footer>
 </html>

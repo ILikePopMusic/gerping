@@ -3,33 +3,51 @@
     <meta charset="UTF-8">
 <head>
 
-    <title>Mad Libs</title>
+    <title>Practice German!</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/menuScript.js"></script>
     <script src="script/madlibsScript.js"></script>
 
 </head>
 
 
 <body >
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
 
-<div class="background">
-      <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
-      <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;">
-          <a style="margin-left: 45px" href="index.html">Home</a>
-          <a href="difficulty.html">Gerping</a>
-          <a href="play.html">Play</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
-          <a href="thank_you.html">Send me Money</a>
-    </h1>  
-</div>
-<div class="game_box" style="margin-left: 150px; margin-top: 50px;">
-<h1>Ein klassisches Gedicht</h1>
+<div class="background" style="height: 100%">
+    <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; height: auto; margin: auto; ">
+        <div class="top_bar" style="margin-top: 0px;">
+        <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 50px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+        <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
+        <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
+        <img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png">
+        <a href="#" style="margin-left: 280px; font-size: 20px;" onclick="backEndInfo()">login</a>
+        <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
+        <div class="working_backend" id="working_backend">
+            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
+        </div>
+        <div id="cross_line" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 50px;"></div>
+        </div>
+        <div id="mySidenav"class="sidenav">
+        <div style="background-color: #3b3b3b; width: 2px; height: 270px; float: right; margin-top: 30px;"></div>
+        <div id="sidebar_content" style="margin-top: 20px;">
+        <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
+        <a href="index.html">Home</a>
+        <a href="gerping.html">Gerping</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="thank_you.html">Donate</a>
+        </div>
+    </div>
+    </div>
+<div class="game_box">
+<h1 style="font-size: 25px; margin-top: 50px;">Ein Gedicht</h1>
 
 <div>
-    <h3 id="blank_error" style="color: red; font-size: 15px; visibility: hidden;">Please fill in all the blanks</h1>
+    <h3 id="blank_error" style="color: red; font-size: 15px; visibility: hidden; margin-bottom: 5px;">Please fill in all the blanks</h1>
     <input class="blank_1" style="margin-top: 10px;"><label style="margin-left: 10px;">Lustiges Wort</label><br>
     <input class="blank_2" style="margin-top: 10px;"><label style="margin-left: 10px;">Tageszeit als Nomen</label><br>
     <input class="blank_3" style="margin-top: 10px;"><label style="margin-left: 10px;">Wetter</label><br>
@@ -57,8 +75,7 @@
     <input class="blank_25" style="margin-top: 10px;"><label style="margin-left: 10px;">Adverb</label><br>
     <input class="blank_26" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip I</label><br>
     <input class="blank_27" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort (best. Artikel, Akkusativ)</label><br>
-    <input class="blank_28" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
-    
+    <input class="blank_28" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>    
         
 </div>
 <button id="submit_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Submit</button>
@@ -66,9 +83,8 @@
 <button id="showOriginal_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Show Original</button>
 </div>
 
-<div id="first_text" style="max-width: 500px; float: left; font-size: 20px;">
-<h1 class="text" id="28" style="font-size: 18px; margin-top: 50px; visibility: hidden; text-align: justify;">
-
+<div id="first_text" style="max-width: 400px; float: left; font-size: 20px;">
+<h1 class="text" class="text" id="7">
     <scope class="b1">Erl</scope>könig<br><br>Wer reitet so spät durch 
     <scope class="b2">Nacht</scope> und 
     <scope class="b3">Wind?</scope><br> Es ist der Vater mit seinem Kind;<br> Er hat 
@@ -109,41 +125,41 @@
 </h1>
 </div>
 
-<div style="max-width: 600px; float: right; margin-right: 100px;">
-<h1 id="original_text" style="font-size: 18px; text-align: justify; margin-top: 50px; visibility: hidden;">
+<div style="max-width: 400px; float: right; margin-right: auto; ">
+<h1 id="original_text" class="original_text">
     Erlkönig<br><br>
-Wer reitet so spät durch Nacht und Wind?<br>
-Es ist der Vater mit seinem Kind;<br>
-Er hat den Knaben wohl in dem Arm,<br>
-Er faßt ihn sicher, er hält ihn warm.<br><br>
-Mein Sohn, was birgst du so bang dein Gesicht? -<br>
-Siehst Vater, du den Erlkönig nicht?<br>
-Den Erlenkönig mit Kron und Schweif? -<br>
-Mein Sohn, es ist ein Nebelstreif. -<br><br>
-»Du liebes Kind, komm, geh mit mir!<br>
-Gar schöne Spiele spiel ich mit dir;<br>
-Manch bunte Blumen sind an dem Strand,<br>
-Meine Mutter hat manch gülden Gewand.«<br><br>
-Mein Vater, mein Vater, und hörest du nicht,<br>
-Was Erlenkönig mir leise verspricht? -<br>
-Sei ruhig, bleibe ruhig, mein Kind;<br>
-In dürren Blättern säuselt der Wind. -<br><br>
-»Willst, feiner Knabe, du mit mir gehn?<br>
-Meine Töchter sollen dich warten schön;<br>
-Meine Töchter führen den nächtlichen Reihn<br>
-Und wiegen und tanzen und singen dich ein.«<br><br>
-Mein Vater, mein Vater, und siehst du nicht dort<br>
-Erlkönigs Töchter am düstern Ort? -<br>
-Mein Sohn, mein Sohn, ich seh es genau:<br>
-Es scheinen die alten Weiden so grau. -<br><br>
-»Ich liebe dich, mich reizt deine schöne Gestalt;<br>
-Und bist du nicht willig, so brauch ich Gewalt.«<br>
-Mein Vater, mein Vater, jetzt faßt er mich an!<br>
-Erlkönig hat mir ein Leids getan! -<br><br>
-Dem Vater grauset's, er reitet geschwind,<br>
-Er hält in den Armen das ächzende Kind,<br>
-Erreicht den Hof mit Mühe und Not;<br>
-In seinen Armen das Kind war tot.<br>
+    Wer reitet so spät durch Nacht und Wind?<br>
+    Es ist der Vater mit seinem Kind;<br>
+    Er hat den Knaben wohl in dem Arm,<br>
+    Er faßt ihn sicher, er hält ihn warm.<br><br>
+    Mein Sohn, was birgst du so bang dein Gesicht? -<br>
+    Siehst Vater, du den Erlkönig nicht?<br>
+    Den Erlenkönig mit Kron und Schweif? -<br>
+    Mein Sohn, es ist ein Nebelstreif. -<br><br>
+    »Du liebes Kind, komm, geh mit mir!<br>
+    Gar schöne Spiele spiel ich mit dir;<br>
+    Manch bunte Blumen sind an dem Strand,<br>
+    Meine Mutter hat manch gülden Gewand.«<br><br>
+    Mein Vater, mein Vater, und hörest du nicht,<br>
+    Was Erlenkönig mir leise verspricht? -<br>
+    Sei ruhig, bleibe ruhig, mein Kind;<br>
+    In dürren Blättern säuselt der Wind. -<br><br>
+    »Willst, feiner Knabe, du mit mir gehn?<br>
+    Meine Töchter sollen dich warten schön;<br>
+    Meine Töchter führen den nächtlichen Reihn<br>
+    Und wiegen und tanzen und singen dich ein.«<br><br>
+    Mein Vater, mein Vater, und siehst du nicht dort<br>
+    Erlkönigs Töchter am düstern Ort? -<br>
+    Mein Sohn, mein Sohn, ich seh es genau:<br>
+    Es scheinen die alten Weiden so grau. -<br><br>
+    »Ich liebe dich, mich reizt deine schöne Gestalt;<br>
+    Und bist du nicht willig, so brauch ich Gewalt.«<br>
+    Mein Vater, mein Vater, jetzt faßt er mich an!<br>
+    Erlkönig hat mir ein Leids getan! -<br><br>
+    Dem Vater grauset's, er reitet geschwind,<br>
+    Er hält in den Armen das ächzende Kind,<br>
+    Erreicht den Hof mit Mühe und Not;<br>
+    In seinen Armen das Kind war tot.<br>
 
 </h1>
 </div>

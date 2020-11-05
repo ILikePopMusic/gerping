@@ -2,39 +2,59 @@ html {
         scroll-behavior: smooth;
 }
 
+
 a:link, a:visited {
-    color: black; text-decoration: none;
-    margin-left: 90px;
-    font-size: 30px;
-    text-align: center;
-    width: 50%
+    color: #3b3b3b; text-decoration: none;
+      
+}
+a:hover {
+        color: lightgrey;
 }
 .background {
+        font-family: 'Cormorant Garamond', serif;
+        /* font-family: 'Oxygen', sans-serif;    
         font-family: 'Quicksand', sans-serif;
-        max-width: 1200px;
+        font-family: 'Nanum Myeongjo', serif; */
+        max-width: 900px;
+        width: auto;
         margin: auto;
         text-align: left;
         padding: 30px;
+        padding-top: 0px;
         background-color: white;
         height: 1800px;
         font-size: 15px
 }
-    
-.vokabel_test {
-    background-color: white; 
-    max-width: 400px; 
-    text-align: center; 
-    margin-left: 400px; 
-    margin-top: 80px; 
-    padding: 20px; 
-    padding-top: 10px; 
-    border-radius: 50px;
-    border: 5px solid black;
+.explanation_box {
+        font-family: 'Cormorant Garamond', serif;
+        max-width: 900px;
+        width: auto;
+        margin: auto;
+        text-align: left;
+        padding: 30px;
+        padding-top: 0px;
+        background-color: white;
+        height: 1800px;
+        font-size: 15px;
+        color: #3b3b3b;
 }
+.vokabel_test {
+        font-family: 'Cormorant Garamond', serif;
+        background-color: white; 
+        width: 400px; 
+        text-align: center; 
+        margin: auto;
+        padding: 20px; 
+        padding-top: 10px; 
+        border-radius: 50px;
+        border: 5px solid black;
+        }
 .vokabel {
+        font-family: 'Cormorant Garamond', serif;
         text-align: center;
         font-size: 30px;
         margin-top: 40px;
+        color: #3b3b3b;
     }
 .answers {
         text-align: center;
@@ -42,6 +62,7 @@ a:link, a:visited {
         margin-left: 500px;
     }
 button {
+        font-family: 'Cormorant Garamond', serif;
         display: inline-block;
         padding: 15px 25px;
         font-size: 24px;
@@ -86,19 +107,259 @@ button:active {
         box-shadow: 0 5px #666;
         transform: translateY(4px);
       }
+
+.wrong_vocab_box {
+        text-align: center;
+        float: right;
+        height: 400px;
+        width: 300px;
+        background-color: white;
+}
+
+.wrong_old_word {
+        color: red;
+        font-size: 20px;
+        text-align: center;
+}
+
+.correct_old_word {
+        color: green;
+        font-size: 20px;
+        text-align: center;
+}
+.faq_questions {
+        font-family: 'Cormorant Garamond', serif;
+}
 .faq_question {
-        color: black;
+        font-family: 'Cormorant Garamond', serif;
+        color: #3b3b3b;
         font-size: 18px;
 
 }
 .faq_answer {
+        font-family: 'Cormorant Garamond', serif;
         color: #636363;
         font-size: 18px;
 }
-.answer_display {
-        width: 300px;
+
+.faq_answer a:hover {
+        color: lightgrey;
+}
+
+.faq_answer a {
+        color: #3b3b3b;
+}
+.answer_display_left {
+        float: left;
+        width: 250px;
+        height: 200px;
+        margin-top: 100px;
+        background-color: white;
+}
+.answer_display_right {
+        float: right;
+        width: 250px;
         height: 200px;
         margin-left: 50px;
         margin-top: 100px;
+        background-color: white;
 }
 
+.sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: white; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 100px; /* Place content 60px from the top */
+        transition: 0.7s; /* 0.5 second transition effect to slide in the sidenav */
+        margin-left: 10px;
+      }
+      
+      /* The navigation menu links */
+      .sidenav a {
+        padding: 8px 8px 8px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        color:#3b3b3b;
+        display: block;
+        transition: 0.3s;
+        margin-left: 40px;
+        text-align: left;
+        
+      }
+      
+      /* When you mouse over the navigation links, change their color */
+      .sidenav a:hover {
+        color: lightgrey;
+      }
+      
+      /* Position and style the close button (top right corner) */
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 10px;
+      }
+      .gerping_links {
+        color: #3b3b3b;
+        
+      }
+
+      .madlibs_links {
+        color: #3b3b3b;  
+        width: 400px;
+        float: left;
+      }
+
+     
+
+      .gerping_links a:hover {
+              color: lightgrey;
+}
+
+
+        .gerping_nav {
+                height: 100%; /* 100% Full-height */
+                width: 0; /* 0 width - change this with JavaScript */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Stay on top */
+                top: 200px; /* Stay 200px from the top */
+                right: 0;
+                background-color: white; 
+                overflow-x: hidden; /* Disable horizontal scroll */
+                padding-top: 0; /* Place content 60px from the top */
+                transition: 0.7s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        .madlibs_nav {
+                height: 100%; 
+                width: 0; 
+                position: fixed;
+                z-index: 1; 
+                top: 200px; 
+                right: 0;
+                background-color: white; 
+                overflow-x: hidden;
+                padding-top: 0;
+                transition: 0.7s;
+        }
+        
+        .vertical_line_gerping {
+                background-color: #3b3b3b; 
+                float: left; 
+                width: 2px; 
+                height: 180px; 
+                margin-top: 15px;
+        }
+
+        .vertical_line_madlibs {
+                background-color: #3b3b3b; 
+                float: left; 
+                width: 2px; 
+                height: 220px; 
+                margin-top: 15px;
+        }
+      
+        .gerping_nav_content a {
+                padding: 5px;
+                text-decoration: none;
+                font-size: 20px;
+                color:#3b3b3b;
+                display: block;
+                transition: 0.3s;
+                margin-left: 40px;
+                margin-top: 5px;
+                text-align: left;
+        }
+
+        .madlibs_nav_content a {
+                padding: 5px;
+                text-decoration: none;
+                font-size: 20px;
+                color:#3b3b3b;
+                display: block;
+                transition: 0.3s;
+                margin-left: 40px;
+                margin-top: 5px;
+                text-align: left;
+        }
+
+        .madlibs_nav_content a:hover {
+                color: lightgrey;
+        }
+
+        .gerping_nav_content a:hover {
+                color: lightgrey;
+        }
+
+        .working_backend {
+                margin-left: 750px;
+                position: absolute;
+                width: 130px; 
+                height: 70px; 
+                margin-top: 20px; 
+                margin-right: 15px; 
+                background-color: white; 
+                border: 2px solid black; 
+                border-radius: 10px;
+                display: none;
+        }
+
+        .help_links a:hover {
+                color: lightgrey;
+        }
+        .top_bar a {
+                color: #3b3b3b;
+                text-decoration: none;
+        }
+
+        .top_bar a:hover {
+                color: lightgrey;
+        }
+
+        .gerping_box {
+                margin: auto;
+                margin-top: 30px;
+                width: 1000px;
+                height: 800px;
+                background-color: white;
+        }
+
+        .how_to_play {
+                font-family: 'Cormorant Garamond', serif;
+                color: #3b3b3b;
+                width: 700px;
+                height: 100%;
+                margin: auto;
+                margin-top: 50px;
+                display: none;
+                
+        }
+
+        .game_box {
+                font-family: 'Cormorant Garamond', serif;
+                margin-left: 50px; 
+                margin-top: 50px;
+                color: #3b3b3b
+        }
+        
+        .text {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 18px; 
+                margin-top: 50px; 
+                visibility: hidden; 
+                text-align: justify;
+        }
+
+        .original_text {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 18px; 
+                text-align: justify; 
+                margin-top: 50px; 
+                visibility: hidden;
+        }

@@ -3,47 +3,59 @@
     <meta charset="UTF-8">
 <head>
     <title>Practice German</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="data/data_b1.js"></script>
     <script src="script/myScripts.js"></script>
+    <script src="script/menuScript.js"></script>
+
+
 </head>
 <body >
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
+  
 
-<div class="background">
-      <div><img style="max-height: 200px; margin-right: 50px;" src="img/gerpinglogo.png"></div>
-      <div class="home_links" style="background-color: #f0f0f0; border-radius: 10px;"> <!-- Links -->
-          <a style="margin-left: 45px" href="index.html">Home</a>
-          <a href="difficulty.html">Gerping</a>
-          <a href="play.html">Play</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
-          <a href="thank_you.html">Send me Money</a>
-    </h1>  
+<div class="background" style="height: 100%">
+          <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; height: auto; margin: auto;">
+            <div style="margin-top: 0px; width: 1000px;">
+            <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 50px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+            <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
+            <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
+            <img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png">
+            <a href="#" style="margin-left: 340px; font-size: 20px;" onclick="backEndInfo()">login</a>
+            <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
+            <div class="working_backend" id="working_backend">
+            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
+            </div>
+            <div id="cross_line" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 50px;"></div>
+            </div>
+            <div id="mySidenav"class="sidenav">
+            <div style="background-color: #3b3b3b; width: 2px; height: 270px; float: right; margin-top: 30px;"></div>
+            <div id="sidebar_content" style="margin-top: 20px;">
+            <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
+            <a href="index.html">Home</a>
+        <a href="gerping.html">Gerping</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="thank_you.html">Donate</a>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- Gerping Box-->
+<div class="gerping_box">
+<div class="answer_display_right">
+  <h2 id="wrong_old_word" class="wrong_old_word"></h2>
 </div>
-<div class="answer_display"
-  style="float: right;">
-  <h2 id="wrong_old_word"
-  style="
-  color: red;
-  font-size: 30px;
-  text-align: center;"></h2>
+  <div class="answer_display_left">
+  <h2 id="correct_old_word" class="correct_old_word"></h2>
 </div>
-  <div class="answer_display"
-  style="float: left;">
-
-  <h2 id="correct_old_word"
-  style="
-  color: green;
-  font-size: 30px;
-  text-align: center;"></h2>
-</div>
-    <!-- VOKABELBOX -->
-<div class="vokabel_test">
+<!-- VOKABELBOX -->   
+<div class="vokabel_test" style="text-align: center;">
     <u><h2 class ="vokabel" id="vokabel">die Vokabel</h2></u> 
-    <div style="text-align: center;">                           <!-- BUTTONS -->
+    <div style="text-align: center;">                           
     <button class="button" id="der">der</button>                                   
     <button class="button" id="die">die</button>                                    
     <button class="button" id="das">das</button>           
@@ -61,19 +73,16 @@
       
       </div>
     
-</div>
-    <!-- Liste mit falschen Vokabeln -->
-
-<div class="wrong_vocab_box" style="
-  text-align: center;
-  float: right;
-  height: 500px;
-  width: 300px;">
+</div> 
+    
+<!-- Liste mit falschen Vokabeln -->
+<div class="wrong_vocab_box">
     
     <button class="vocab_button" id="wrong_vocab_button">Show wrong Words</button>
-    <h2 id="wrong_vocab_list" style="color: black; font-size: 18px; margin-top: 0px;"></h2>
+    <h2 id="wrong_vocab_list" style="color: #3b3b3b; font-size: 20px; margin-top: 0px;"></h2>
     
-    </div>
+</div>
+</div> 
 
 
 
