@@ -11,10 +11,12 @@ a:hover {
         color: lightgrey;
 }
 .background {
-        font-family: 'Cormorant Garamond', serif;
-        /* font-family: 'Oxygen', sans-serif;    
+        /* font-family: 'Cormorant Garamond', serif;
+        font-family: 'Oxygen', sans-serif;    
         font-family: 'Quicksand', sans-serif;
-        font-family: 'Nanum Myeongjo', serif; */
+        font-family: 'Nanum Myeongjo', serif;
+        font-family: 'Karla', sans-serif; */
+        font-family: 'Alegreya', serif;
         max-width: 900px;
         width: auto;
         margin: auto;
@@ -26,7 +28,7 @@ a:hover {
         font-size: 15px
 }
 .explanation_box {
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'Alegreya', serif;
         max-width: 900px;
         width: auto;
         margin: auto;
@@ -39,7 +41,7 @@ a:hover {
         color: #3b3b3b;
 }
 .vokabel_test {
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'Alegreya', serif;
         background-color: white; 
         width: 400px; 
         text-align: center; 
@@ -50,7 +52,7 @@ a:hover {
         border: 5px solid black;
         }
 .vokabel {
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'Alegreya', serif;
         text-align: center;
         font-size: 30px;
         margin-top: 40px;
@@ -62,7 +64,7 @@ a:hover {
         margin-left: 500px;
     }
 button {
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'Alegreya', serif;
         display: inline-block;
         padding: 15px 25px;
         font-size: 24px;
@@ -128,16 +130,16 @@ button:active {
         text-align: center;
 }
 .faq_questions {
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'Alegreya', serif;
 }
 .faq_question {
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'Alegreya', serif;
         color: #3b3b3b;
         font-size: 18px;
 
 }
 .faq_answer {
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'Alegreya', serif;
         color: #636363;
         font-size: 18px;
 }
@@ -331,7 +333,7 @@ button:active {
         }
 
         .how_to_play {
-                font-family: 'Cormorant Garamond', serif;
+                font-family: 'Alegreya', serif;
                 color: #3b3b3b;
                 width: 700px;
                 height: 100%;
@@ -342,14 +344,14 @@ button:active {
         }
 
         .game_box {
-                font-family: 'Cormorant Garamond', serif;
+                font-family: 'Alegreya', serif;
                 margin-left: 50px; 
                 margin-top: 50px;
                 color: #3b3b3b
         }
         
         .text {
-                font-family: 'Cormorant Garamond', serif;
+                font-family: 'Alegreya', serif;
                 font-size: 18px; 
                 margin-top: 50px; 
                 visibility: hidden; 
@@ -357,7 +359,7 @@ button:active {
         }
 
         .original_text {
-                font-family: 'Cormorant Garamond', serif;
+                font-family: 'Alegreya', serif;
                 font-size: 18px; 
                 text-align: justify; 
                 margin-top: 50px; 
