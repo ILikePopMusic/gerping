@@ -13,29 +13,29 @@
     <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
 
     <div class="background" style="height: 100%;">
-        <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; ">
-            <div style="margin-top: 0px;">
-            <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 42px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+        <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; height: auto; margin: auto; ">
+            <div class="top_bar" style="margin-top: 0px;">
+            <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 50px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
             <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
             <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
             <img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png">
             <a href="#" style="margin-left: 280px; font-size: 20px;" onclick="backEndInfo()">login</a>
             <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
             <div class="working_backend" id="working_backend">
-            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
+                <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
             </div>
-            <div id="cross_line" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 42px;"></div>
+            <div id="cross_line" class="cross_line_horizontal" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 50px;"></div>
             </div>
             <div id="mySidenav"class="sidenav">
-            <div style="background-color: #3b3b3b; width: 2px; height: 270px; float: right; margin-top: 30px;"></div>
+            <div class="line_vertical_menu"></div>
             <div id="sidebar_content" style="margin-top: 20px;">
             <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
             <a href="index.html">Home</a>
-        <a href="gerping.html">Gerping</a>
-        <a href="grammar.html">Grammar</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-        <a href="thank_you.html">Donate</a>
+            <a href="gerping.html">Gerping</a>
+            <a href="grammar.html">Grammar</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+            <a href="thank_you.html">Donate</a>
             </div>
         </div>
         </div>
@@ -43,9 +43,9 @@
         <div class="gerping_links">
         <img src="img/articles.png" style="max-height: 300px; float: right; margin-right: 100px; margin-top: 10px;">
         <h1 style="margin-left: 50px; padding-top: 50px; font-size: 25px; width: 200px;">Articles</h1>
-        <a href="#" onclick="explainDer();"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left; width: 200px;">der / ein (maskulin)</h2></a>
-        <a href="#" onclick="explainDie();"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left; width: 200px;">die / eine (feminin)</h2></a>
-        <a href="#" onclick="explainDas();"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left; width: 200px;">das / ein (neutrum)</h2></a>
+        <a href="#" onclick="explainGrammarOne();"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left; width: 200px;">der / ein (maskulin)</h2></a>
+        <a href="#" onclick="explainGrammarTwo();"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left; width: 200px;">die / eine (feminin)</h2></a>
+        <a href="#" onclick="explainGrammarThree();"><h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left; width: 200px;">das / ein (neutrum)</h2></a>
         
         </div>
         <div class="explanation_box" style="width: 100%; height: 500px; background-color: white;">
@@ -85,12 +85,12 @@
         </div>
         <div class="explanation_das" id="explanation_das" style="display: none">
             <h1 style="margin-left: 50px; padding-top: 50px; font-size: 25px;">das / ein (neutrum)</h1>
-            <h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left;">Among other things, here are some nouns, that always have the masculine gender<br><br>
+            <h2 style="margin-left: 80px; margin-top: 10px; font-size: 20px; text-align: left;">Among other things, here are some nouns, that always have the neuter gender<br><br>
             colours (das Blau, das Schwarz)<br>
             nominalized verbs (das Fahren, das Trinken)<br>
             nominalized adjectives (das Gute, das Schöne)<br><br>
-            besides that, there are word endings that most often occur in masculine nouns<br><br>
-            -chen/lein (das Mädchen, das Mäuschen, das Kindlein)
+            besides that, there are word endings that most often occur in neuter nouns<br><br>
+            -chen/lein (das Mädchen, das Mäuschen, das Kindlein)<br>
             -um (das Eigentum, das Spektrum)<br>
             -nis (das Ergebnis, das Verhältnis)<br>
             -ment (das Instrument, das Parlament)<br>

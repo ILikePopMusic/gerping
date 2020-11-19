@@ -31,7 +31,7 @@ function openGerpNav() {
                 document.getElementById("gerping_nav").style.width = "600px";
                 setTimeout(function () {
                 $('#gerping_nav_content').fadeIn(500)
-                }, 1000)
+                }, 500)
                 GerpMenuOpen = true;
 
         }, 1500)
@@ -44,21 +44,19 @@ function openGerpNav() {
         document.getElementById("gerping_nav").style.width = "600px";
         setTimeout(function () {
         $('#gerping_nav_content').fadeIn(500)
-        }, 1000)
+        }, 500)
         GerpMenuOpen = true;
 
     }
 }
-
 function closeGerpNav() {
     $('#gerping_nav_content').fadeOut(500);
 setTimeout(function () {
     document.getElementById("gerping_nav").style.width = "0";
     document.getElementById("gerping_nav").style.marginLeft = "0";
-}, 1000)
+}, 500)
     GerpMenuOpen = false;
 }
-
 function backEndInfo() { 
     $('#working_backend').hide()
     $('#working_backend').fadeIn(500)
@@ -66,8 +64,6 @@ function backEndInfo() {
     $('#working_backend').fadeOut(500)
     }, 2000)
 }
-
-
 var MadMenuOpen = false;
 function openMadNav() {
     if (GerpMenuOpen == true) {
@@ -78,11 +74,11 @@ function openMadNav() {
                 document.getElementById("madlibs_nav").style.width = "600px";
                 setTimeout(function () {
                 $('#madlibs_nav_content').fadeIn(500)
-                }, 1000)
+                }, 500)
                 MadMenuOpen = true;
             
 
-        }, 1500)
+        }, 1000)
     }
     else if (MadMenuOpen == true) {
         closeMadNav();
@@ -92,103 +88,101 @@ function openMadNav() {
         document.getElementById("madlibs_nav").style.width = "600px";
         setTimeout(function () {
         $('#madlibs_nav_content').fadeIn(500)
-        }, 1500)
+        }, 500)
         MadMenuOpen = true;
 
     }
 }
-
-    function closeMadNav() {
-    $('#madlibs_nav_content').fadeOut(500);
+function closeMadNav() {
+$('#madlibs_nav_content').fadeOut(500);
+setTimeout(function () {
+document.getElementById("madlibs_nav").style.width = "0";
+document.getElementById("madlibs_nav").style.marginLeft = "0";
+}, 500)
+MadMenuOpen = false;
+}
+function howToPlay() {
+    if (document.getElementById("how_to_play").style.display == "") {
+    $('#how_to_play').hide()
+    $('#how_to_play').fadeIn(500)
+}
+    else {
+    $('#how_to_play').fadeOut(500)
     setTimeout(function () {
-    document.getElementById("madlibs_nav").style.width = "0";
-    document.getElementById("madlibs_nav").style.marginLeft = "0";
-    }, 1000)
-    MadMenuOpen = false;
+    document.getElementById("how_to_play").style.display = "";
+    }, 600)
     }
-
-    function howToPlay() {
-        if (document.getElementById("how_to_play").style.display == "") {
-        $('#how_to_play').hide()
-        $('#how_to_play').fadeIn(500)
-    }
-        else {
-        $('#how_to_play').fadeOut(500)
-        setTimeout(function () {
-        document.getElementById("how_to_play").style.display = "";
-        }, 600)
-        }
-    }
-    var grammarBoxDer = false;
-    var grammarBoxDie = false;
-    var grammarBoxDas = false;
-    function explainFadeOut() {
-        $('#explanation_der').fadeOut(500);
-        $('#explanation_die').fadeOut(500);
-        $('#explanation_das').fadeOut(500);
-        grammarBoxDer = false;
-        grammarBoxDie = false;
-        grammarBoxDas = false;       
-            
-    }
-    function explainDer() {
-        if (grammarBoxDie == true || grammarBoxDas == true) {
-            explainFadeOut();
-            setTimeout(function() {
-                $('#explanation_der').hide();
-                $('#explanation_der').fadeIn(500)
-                grammarBoxDer = true;
-            }, 1000)
-        }
-        else if (grammarBoxDer == false) {
+}
+var grammarBoxOne = false;
+var grammarBoxTwo = false;
+var grammarBoxThree = false;
+function explainFadeOut() {
+    $('#explanation_der').fadeOut(500);
+    $('#explanation_die').fadeOut(500);
+    $('#explanation_das').fadeOut(500);
+    grammarBoxOne = false;
+    grammarBoxTwo = false;
+    grammarBoxThree = false;       
+        
+}
+function explainGrammarOne() {
+    if (grammarBoxTwo == true || grammarBoxThree == true) {
+        explainFadeOut();
+        setTimeout(function() {
             $('#explanation_der').hide();
             $('#explanation_der').fadeIn(500)
-            grammarBoxDer = true;            
-        }
-        
-        else {
-            explainFadeOut();
-        }
+            grammarBoxOne = true;
+        }, 1000)
     }
+    else if (grammarBoxOne == false) {
+        $('#explanation_der').hide();
+        $('#explanation_der').fadeIn(500)
+        grammarBoxOne = true;            
+    }
+    
+    else {
+        explainFadeOut();
+    }
+}
 
-    function explainDie() {
-        if (grammarBoxDer == true || grammarBoxDas == true) {
-            explainFadeOut();
-            setTimeout(function() {
-                $('#explanation_die').hide();
-                $('#explanation_die').fadeIn(500)
-                grammarBoxDie = true;
-            }, 1000)
-            
-        }
-        else if (grammarBoxDie == false) {
+function explainGrammarTwo() {
+    if (grammarBoxOne == true || grammarBoxThree == true) {
+        explainFadeOut();
+        setTimeout(function() {
             $('#explanation_die').hide();
             $('#explanation_die').fadeIn(500)
-            grammarBoxDie = true;
-        }
+            grammarBoxTwo = true;
+        }, 1000)
         
-        else {
-            explainFadeOut();
-        }
     }
+    else if (grammarBoxTwo == false) {
+        $('#explanation_die').hide();
+        $('#explanation_die').fadeIn(500)
+        grammarBoxTwo = true;
+    }
+    
+    else {
+        explainFadeOut();
+    }
+}
 
-    function explainDas() {
-        if (grammarBoxDer == true || grammarBoxDie == true) {
-            explainFadeOut();
-            setTimeout(function() {
-                $('#explanation_das').hide();
-                $('#explanation_das').fadeIn(500)
-                grammarBoxDas = true;
-            }, 1000)
-            
-        }
-        else if (grammarBoxDas == false) {
+function explainGrammarThree() {
+    if (grammarBoxOne == true || grammarBoxTwo == true) {
+        explainFadeOut();
+        setTimeout(function() {
             $('#explanation_das').hide();
             $('#explanation_das').fadeIn(500)
-            grammarBoxDas = true;
-        }
+            grammarBoxThree = true;
+        }, 1000)
         
-        else {
-            explainFadeOut();
-        }
     }
+    else if (grammarBoxThree == false) {
+        $('#explanation_das').hide();
+        $('#explanation_das').fadeIn(500)
+        grammarBoxThree = true;
+    }
+    
+    else {
+        explainFadeOut();
+    }
+}

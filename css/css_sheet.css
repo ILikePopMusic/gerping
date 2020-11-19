@@ -255,7 +255,7 @@ button:active {
                 background-color: #3b3b3b; 
                 float: left; 
                 width: 2px; 
-                height: 180px; 
+                height: 200px; 
                 margin-top: 15px;
         }
 
@@ -263,7 +263,7 @@ button:active {
                 background-color: #3b3b3b; 
                 float: left; 
                 width: 2px; 
-                height: 220px; 
+                height: 240px; 
                 margin-top: 15px;
         }
       
@@ -364,4 +364,12 @@ button:active {
                 text-align: justify; 
                 margin-top: 50px; 
                 visibility: hidden;
+        }
+
+        .line_vertical_menu {
+                background-color: #3b3b3b; 
+                width: 2px; 
+                height: 290px; 
+                float: right; 
+                margin-top: 30px;
         }
