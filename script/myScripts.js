@@ -1,9 +1,9 @@
 $( document ).ready(function() {
 
-const derBtn = document.getElementById("der")
-const dieBtn = document.getElementById("die")
-const dasBtn = document.getElementById("das")
-const wordsBtn = document.getElementById("wrong_vocab_button")
+const derBtn = document.getElementById("der");
+const dieBtn = document.getElementById("die");
+const dasBtn = document.getElementById("das");
+const wordsBtn = document.getElementById("wrong_vocab_button");
 
 var corAns = 0;
 var incorAns = 0;
@@ -17,7 +17,7 @@ function getWord() {
   newObject = data[rnd].B.split(' ') //newObject = [article, noun] or [article, article, noun]
   var testVokabel = document.getElementById("vokabel");
   testVokabel.innerHTML = newObject[newObject.length - 1];
-}
+};
 function getStats() {
   var totalWords = document.getElementById("total_words")
   totalWords.innerHTML = corAns + incorAns;
@@ -29,7 +29,7 @@ function getStats() {
     else {
       document.getElementById("success_rate").style.color = "green";
     }
-}
+};
 function wrongWordList() {
 if (newObject.length == 3) {
   wrongWords.push("<br>" + newObject[0] + " " + newObject[1] + " " + newObject[2]);
@@ -38,7 +38,7 @@ else {
   wrongWords.push("<br>" + newObject[0] + " " + newObject[1])
 }
 
-}
+};
 function correctWord() {
       corAns = corAns + 1
       var answer = document.getElementById("correct_answer")
@@ -55,7 +55,7 @@ function correctWord() {
       }
       getStats()
       getWord()
-}
+};
 function wrongWord() {
   incorAns = incorAns + 1
   var falseAnswer = document.getElementById("incorrect_answer")
@@ -73,7 +73,7 @@ function wrongWord() {
   getStats()
   wrongWordList()
   getWord()
-}
+};
 
 derBtn.addEventListener('click', function(event) {
   if (newObject[0] == "der" || newObject[1] == "der") {
@@ -82,7 +82,7 @@ derBtn.addEventListener('click', function(event) {
   else {
   wrongWord()
   }
-})
+});
 dieBtn.addEventListener('click', function(event) {
   if (newObject[0] == "die" || newObject[1] == "die") {
   correctWord() 
@@ -90,7 +90,7 @@ dieBtn.addEventListener('click', function(event) {
   else {
   wrongWord()
   }
-})
+});
 dasBtn.addEventListener('click', function(event) {
   if (newObject[0] == "das" || newObject[1] == "das") {
   correctWord() 
@@ -98,7 +98,7 @@ dasBtn.addEventListener('click', function(event) {
   else {
   wrongWord()
   }
-})
+});
 wordsBtn.addEventListener('click', function(event) {
  var list = document.getElementById("wrong_vocab_list")
  list.innerHTML = wrongWords
