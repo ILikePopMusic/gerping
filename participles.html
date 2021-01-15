@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+<head>
+    <title>Practice German</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="data/verb_data.js"></script>
+    <script src="script/participleScript.js"></script>
+    <script src="script/menuScript.js"></script>
+
+
+</head>
+<body >
+  
+
+<div class="background" style="height: 100%">
+    <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; height: auto; margin: auto; ">
+        <div class="top_bar" style="margin-top: 0px;">
+        <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 50px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+        <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
+        <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
+        <a href="index.html"><img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png"></a>
+        <a href="#" style="margin-left: 280px; font-size: 20px;" onclick="backEndInfo()">login</a>
+        <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
+        <div class="working_backend" id="working_backend">
+            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
+        </div>
+        <div id="cross_line" class="cross_line_horizontal" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 50px;"></div>
+        </div>
+        <div id="mySidenav"class="sidenav">
+        <div class="line_vertical_menu"></div>
+        <div id="sidebar_content" style="margin-top: 20px;">
+        <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
+        <a href="index.html">Home</a>
+        <a href="gerping.html">Gerping</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="thank_you.html">Donate</a>
+        </div>
+    </div>
+    </div>
+    </div>
+<!-- Gerping Box-->
+<div style="width: 200px; height: 200px; float: right; margin-right: 450px;">
+    <p style="margin-top: 100px; font-style: italic;">Note: type the correct participle and press "Enter" or click the button.</p>
+</div>
+
+<div style="margin: auto; text-align: center; max-width: 500px; margin-top: 100px;">
+<button id="startButton" onclick="resetStats();">Start / Reset</button>
+</div>
+<div class="gerping_box">
+
+<div class="answer_display_right">
+  <h2 id="wrong_old_word" class="wrong_old_word"></h2>
+</div>
+  <div class="answer_display_left">
+  <h2 id="correct_old_word" class="correct_old_word"></h2>
+</div>
+<!-- VOKABELBOX -->   
+<div class="vokabel_test" style="text-align: center;">
+    <u><h2 class ="verb" id="verb">das Verb</h2></u> 
+    <div style="text-align: center;">
+    <h2 id="person" style="text-align: left; margin-left: 50px; float: left; margin-top: 5px; margin-bottom: 0px;"></h2>
+    <div class="input_and_confirm">
+    <input class="verbInput" id="verbInput" style="margin-top: 10px; margin-right: 0px;" onkeydown="checkInput(this)";>
+    <button style="padding: 5px; float: right; margin-top: 0px; float: top; height: 30px; font-size: 15px;" id="startButton" onclick="checkWord();">▷</button>
+    </div>  
+                                      
+    </div>
+    <div style="margin-top: 0px; padding: 0px;" class="answer_counter">
+        
+        <h2>Correct: <scope id="correct_answer">0</scope> <scope style="margin-left: 50px;"> Incorrect: </scope><scope id="incorrect_answer">0</scope></h2>
+    
+    </div>
+    <div class="answer_stats">
+
+      <h3 style="text-align: center;">Total verbs: <scope id="total_verbs" style="margin-left: 20px;">0</scope></h3>
+      <h3 style="text-align: center;">Success rate: <scope id="success_rate" style="margin-left: 12px; color: black;">0 %</scope></h3>
+      
+      
+      </div>
+    
+</div> 
+    
+<!-- Liste mit falschen Vokabeln -->
+<div class="wrong_vocab_box">
+    
+    <button class="vocab_button" id="wrong_verb_button" onclick="showWrongVerbs();">Show wrong Verbs</button>
+    <h2 id="wrong_vocab_list" style="color: #3b3b3b; font-size: 20px; margin-top: 0px;"></h2>
+    
+</div>
+</div> 
+
+
+
+</body>
+</html>
