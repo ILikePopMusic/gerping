@@ -1,0 +1,89 @@
+/* default and menu css */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+a:link, a:visited {
+color: #3b3b3b; text-decoration: none;
+  
+}
+a:hover {
+    color: lightgrey;
+}
+.top_menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+button {
+    font-family: 'Alegreya', serif;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin: 20px;
+  }
+button:hover {background-color: #dfdfdf}
+      
+button:active {
+        background-color:#dadada;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+}
+
+.login_register_box {
+    display: flex;
+    align-items: flex-end;
+    width: 40%;
+    text-align: right;
+    
+}
+.login_link {
+    flex: 3;    
+}
+.register_link {
+    flex: 1;
+    
+}
+.cross_line_horizontal {
+    background-color: #3b3b3b;
+    height: 2px;
+    width: 100%;
+    margin: auto;
+}
+.working_backend_box {    
+    justify-content: flex-end;
+    display: flex;    
+    text-align: right;   
+    height: 70px;
+    align-items: flex-end;   
+       
+}
+.working_backend {     
+    width: auto;
+    background-color: white; 
+    border: 2px solid black; 
+    border-radius: 10px;
+    text-align: center;
+    display: none; 
+}
+
+.body {
+    font-family: 'Alegreya', serif;
+}
+.background {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+}

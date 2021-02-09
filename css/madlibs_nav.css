@@ -1,0 +1,43 @@
+.madlibs_nav {
+    height: 100%; 
+    width: 0; 
+    position: fixed;
+    z-index: 1; 
+    top: 200px; 
+    right: 0;
+    background-color: white; 
+    overflow-x: hidden;
+    padding-top: 0;
+    transition: 0.3s;
+}
+
+.madlibs_nav_content a {
+    padding: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color:#3b3b3b;
+    display: block;
+    transition: 0.3s;
+    margin-left: 40px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.madlibs_nav_content a:hover {
+    color: lightgrey;
+}
+
+.madlibs_links {
+    color: #3b3b3b;  
+    width: 400px;
+    float: left;
+}
+
+.vertical_line_madlibs {
+    background-color: #3b3b3b; 
+    float: left; 
+    width: 2px; 
+    height: 240px; 
+    margin-top: 15px;
+}
+

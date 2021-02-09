@@ -7,17 +7,17 @@ else {
     $("#sidebar_content").hide() //motherfucker can only fade out, when its hidden but it doesnt work with visibility = hidden ...
 document.getElementById("mySidenav").style.width = "200px";
 setTimeout(function () {
-    $("#sidebar_content").fadeIn(500)
-}, 500)
+    $("#sidebar_content").fadeIn(300)
+}, 300)
 }
 }
 
 function closeNav() {
-    $("#sidebar_content").fadeOut(500);
+    $("#sidebar_content").fadeOut(300);
 setTimeout(function () {
     document.getElementById("mySidenav").style.width = "0"
     document.getElementById("mySidenav").style.marginLeft = "0";
-}, 500)
+}, 300)
 }
 
 
@@ -30,11 +30,11 @@ function openGerpNav() {
                 $('#gerping_nav_content').hide()
                 document.getElementById("gerping_nav").style.width = "600px";
                 setTimeout(function () {
-                $('#gerping_nav_content').fadeIn(500)
-                }, 500)
+                $('#gerping_nav_content').fadeIn(300)
+                }, 300)
                 GerpMenuOpen = true;
 
-        }, 1500)
+        }, 800)
     }
     else if (GerpMenuOpen == true) {
         closeGerpNav();
@@ -43,18 +43,18 @@ function openGerpNav() {
         $('#gerping_nav_content').hide()
         document.getElementById("gerping_nav").style.width = "600px";
         setTimeout(function () {
-        $('#gerping_nav_content').fadeIn(500)
-        }, 500)
+        $('#gerping_nav_content').fadeIn(300)
+        }, 300)
         GerpMenuOpen = true;
 
     }
 }
 function closeGerpNav() {
-    $('#gerping_nav_content').fadeOut(500);
+    $('#gerping_nav_content').fadeOut(300);
 setTimeout(function () {
     document.getElementById("gerping_nav").style.width = "0";
     document.getElementById("gerping_nav").style.marginLeft = "0";
-}, 500)
+}, 300)
     GerpMenuOpen = false;
 }
 function backEndInfo() { 
@@ -73,12 +73,12 @@ function openMadNav() {
                 $('#madlibs_nav_content').hide()
                 document.getElementById("madlibs_nav").style.width = "600px";
                 setTimeout(function () {
-                $('#madlibs_nav_content').fadeIn(500)
-                }, 500)
+                $('#madlibs_nav_content').fadeIn(300)
+                }, 300)
                 MadMenuOpen = true;
             
 
-        }, 1000)
+        }, 800)
     }
     else if (MadMenuOpen == true) {
         closeMadNav();
@@ -87,30 +87,30 @@ function openMadNav() {
         $('#madlibs_nav_content').hide()
         document.getElementById("madlibs_nav").style.width = "600px";
         setTimeout(function () {
-        $('#madlibs_nav_content').fadeIn(500)
-        }, 500)
+        $('#madlibs_nav_content').fadeIn(300)
+        }, 300)
         MadMenuOpen = true;
 
     }
 }
 function closeMadNav() {
-$('#madlibs_nav_content').fadeOut(500);
+$('#madlibs_nav_content').fadeOut(300);
 setTimeout(function () {
 document.getElementById("madlibs_nav").style.width = "0";
 document.getElementById("madlibs_nav").style.marginLeft = "0";
-}, 500)
+}, 300)
 MadMenuOpen = false;
 }
 function howToPlay() {
     if (document.getElementById("how_to_play").style.display == "") {
     $('#how_to_play').hide()
-    $('#how_to_play').fadeIn(500)
+    $('#how_to_play').fadeIn(300)
 }
     else {
-    $('#how_to_play').fadeOut(500)
+    $('#how_to_play').fadeOut(300)
     setTimeout(function () {
     document.getElementById("how_to_play").style.display = "";
-    }, 600)
+    }, 400)
     }
 }
 var grammarBoxOne = false;

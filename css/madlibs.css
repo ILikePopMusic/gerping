@@ -1,0 +1,24 @@
+.game_box {
+    width: 80%;
+    margin: auto;
+}
+.text_box {
+    width: 80%;
+    margin: auto;
+}
+
+.text {
+    font-family: 'Alegreya', serif;
+    font-size: 18px; 
+    margin-top: 50px; 
+    visibility: hidden; 
+    text-align: justify;
+}
+
+.original_text {
+    font-family: 'Alegreya', serif;
+    font-size: 18px; 
+    text-align: justify; 
+    margin-top: 50px; 
+    visibility: hidden;
+}

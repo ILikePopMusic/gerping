@@ -1,4 +1,4 @@
-    var verben = [
+var verben = [
         {
             "Inf": "abfahren",
             "ich": "fahre ab",
@@ -258,16 +258,6 @@
             "ihr": "steigt aus",
             "sie": "steigen aus",
             "Partizip": "ausgestiegen"
-        },
-        {
-            "Inf": "ausziehen (sich)",
-            "ich": "ziehe mich an",
-            "du": "ziehst dich an",
-            "er": "zieht sich an",
-            "wir": "ziehen uns an",
-            "ihr": "zieht euch an",
-            "sie": "ziehen sich an",
-            "Partizip": "angezogen"
         },
         {
             "Inf": "ausziehen (sich)",
@@ -1177,7 +1167,7 @@
             "wir": "lügen",
             "ihr": "lügt",
             "sie": "lügen",
-            "Partizip": "gelügt"
+            "Partizip": "gelogen"
         },
         {
             "Inf": "machen",

@@ -9,8 +9,10 @@ var corAns = 0;
 var incorAns = 0;
 var min = 0;
 var max = data.length - 1;
-var totalWords = 0;
+
 var wrongWords = [];
+var wrongInput = [];
+
 
 function getWord() {
   var rnd = Number(Math.round(Math.floor(Math.random() * (+max + 1 - +min)) + +min))
@@ -58,17 +60,24 @@ function correctWord() {
 };
 function wrongWord() {
   incorAns = incorAns + 1
-  var falseAnswer = document.getElementById("incorrect_answer")
-  falseAnswer.innerHTML = incorAns;
+  document.getElementById("incorrect_answer").innerHTML = incorAns;
   var infoFieldWrong = document.getElementById("wrong_old_word")
   var infoFieldCorrect = document.getElementById("correct_old_word")
   if (newObject.length == 3) {
     infoFieldWrong.innerHTML = newObject[0] + " " + newObject[1] + " " + newObject[2]
     infoFieldCorrect.innerHTML = " "    
+    
   }
   else {
     infoFieldWrong.innerHTML = newObject[0] + " " + newObject[1]
-    infoFieldCorrect.innerHTML = " "    
+    infoFieldCorrect.innerHTML = " "
+    if (newObject.length == 3) {
+      wrongInput.push("<br>" + " " + selectedArticle + newObject[3])
+    }
+    else {
+      wrongInput.push("<br>" + " " + selectedArticle + newObject[2])
+    }
+    
   }
   getStats()
   wrongWordList()
@@ -79,7 +88,14 @@ derBtn.addEventListener('click', function(event) {
   if (newObject[0] == "der" || newObject[1] == "der") {
   correctWord()      
   }
+  else {  
+  selectedArticle = "der"
+  if (newObject.length == 3) {
+    wrongInput.push("<br>" + "der" + newObject[3])
+  }  
   else {
+    wrongInput.push("<br>" + "der" + newObject[3])
+  }
   wrongWord()
   }
 });
@@ -87,7 +103,8 @@ dieBtn.addEventListener('click', function(event) {
   if (newObject[0] == "die" || newObject[1] == "die") {
   correctWord() 
   }
-  else {
+  else {  
+  selectedArticle = "die"  
   wrongWord()
   }
 });
@@ -96,6 +113,7 @@ dasBtn.addEventListener('click', function(event) {
   correctWord() 
   }
   else {
+  selectedArticle = "das"  
   wrongWord()
   }
 });
@@ -108,3 +126,8 @@ getWord()
 
 });
 
+function showWrongWords() {
+  document.getElementById("show_words_list").style.visibility = "visible";
+  console.log("made visible");
+  
+}

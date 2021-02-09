@@ -7,9 +7,11 @@ var correctAnswer = 0;
 var wrongAnswer = 0;
 var totalVerbs = 0;
 var successRate = 0;
-var wrongWords = [];
+var wrongWords = ["Correct Conjugation:<br>"];
+var wrongInput = ["You wrote:<br>"];
 var conjSequence = 1;
 var buttonCLicked;
+
 
 
 function checkInput() {
@@ -34,7 +36,10 @@ function checkWord() {
         wrongAnswer = wrongAnswer + 1;
         document.getElementById("wrong_old_word").innerText = verbForm;
         document.getElementById("correct_old_word").innerText = "";
-        wrongWords.push("<br>" + verbForm);
+       
+        wrongWords.push("<br>" + verbForm)
+        wrongInput.push("<br>" + verbInput)
+        
         getStats();
         getParticiple();
     }
@@ -56,7 +61,10 @@ function getStats() {
 }
 
 function showWrongVerbs() {
+    document.getElementById("show_words_list").style.visibility = "visible";
+    console.log("made visible");
     document.getElementById("wrong_vocab_list").innerHTML = wrongWords;
+    document.getElementById("wrong_input_list").innerHTML = wrongInput;
 }
 
 
@@ -69,6 +77,9 @@ function getParticiple() {
 
 
 function resetStats() {
+document.getElementById("show_words_list").style.visibility = "hidden"
+document.getElementById("sendButton").disabled = false;
+document.getElementById("verbInput").disabled = false;
 document.getElementById("correct_answer").innerText = 0;    
 document.getElementById("incorrect_answer").innerText = 0;
 document.getElementById("total_verbs").innerText = 0;
@@ -82,6 +93,7 @@ wrongAnswer = 0;
 totalVerbs = 0;
 successRate = 0;
 wrongWords = [];
+wrongInput = [];
 
 document.getElementById("success_rate").style.color = "black";
     getParticiple();

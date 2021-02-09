@@ -2,80 +2,85 @@
 <html lang="en">
     <meta charset="UTF-8">
 <head>
-
     <title>Practice German!</title>
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script/menuScript.js"></script>
-    <script src="script/madlibsScript.js"></script>
-
 </head>
 
 
-<body >
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
+<body>
+    
 
-<div class="background" style="height: 100%">
-    <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; height: auto; margin: auto; ">
-        <div class="top_bar" style="margin-top: 0px;">
-        <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 50px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
-        <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
-        <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
-        <a href="index.html"><img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png"></a>
-        <a href="#" style="margin-left: 280px; font-size: 20px;" onclick="backEndInfo()">login</a>
-        <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
-        <div class="working_backend" id="working_backend">
-            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
-        </div>
-        <div id="cross_line" class="cross_line_horizontal" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 50px;"></div>
-        </div>
-        <div id="mySidenav"class="sidenav">
-        <div class="line_vertical_menu"></div>
-        <div id="sidebar_content" style="margin-top: 20px;">
-        <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
-        <a href="index.html">Home</a>
-        <a href="gerping.html">Gerping</a>
-        <a href="grammar.html">Grammar</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-        <a href="thank_you.html">Donate</a>
-        </div>
-    </div>
-    </div>
+<div class="background">
+<div class="menu">
+            <div class ="top_menu">
+                
+                        <div class="image_container">                
+                            <a href="index.html"><img class="icon" style="max-height: 40px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+                            <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
+                            <a href="help.html"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
+                            <a href="index.html"><img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png"></a>                              
+                        </div>
+                        <div class="login_register_box">
+                            <a href="#" class="login_link" onclick="backEndInfo()">login</a>
+                            <a href="#" class="register_link" onclick="backEndInfo()">register</a>
+                            
+                        </div>
+                        
+                                
+                        
+                        <div id="mySidenav"class="sidenav">
+                        <div class="line_vertical_menu"></div>
+                        <div id="sidebar_content" style="margin-top: 20px;">
+                        <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
+                        <a href="index.html">Home</a>
+                        <a href="gerping.html">Gerping</a>
+                        <a href="grammar.html">Grammar</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="thank_you.html">Donate</a>
+                        </div>
+                    </div>
+                
+                
+            </div>
+            <div id="cross_line" class="cross_line_horizontal"></div>
+            <div class="working_backend_box"><div class="working_backend" id="working_backend">
+                <p style="margin: auto; text-align: left; padding: 5px;">still learning<br>backend programming :)</p>
+            </div>
+            </div>
+</div>
 <div class="game_box">
 <h1 style="font-size: 25px; margin-top: 50px;">Ein Gedicht</h1>
 
 <div>
     <h3 id="blank_error" style="color: red; font-size: 15px; visibility: hidden; margin-bottom: 5px;">Please fill in all the blanks</h1>
-    <input class="blank_1" style="margin-top: 10px;"><label style="margin-left: 10px;">Lustiges Wort</label><br>
-    <input class="blank_2" style="margin-top: 10px;"><label style="margin-left: 10px;">Tageszeit als Nomen</label><br>
-    <input class="blank_3" style="margin-top: 10px;"><label style="margin-left: 10px;">Wetter</label><br>
-    <input class="blank_4" style="margin-top: 10px;"><label style="margin-left: 10px;">Synonym für Sohn (best. Artikel, Akkusativ)</label><br>
-    <input class="blank_5" style="margin-top: 10px;"><label style="margin-left: 10px;">Adverb</label><br>
-    <input class="blank_6" style="margin-top: 10px;"><label style="margin-left: 10px;">Körperteil (best. Artikel, Akkusativ)</label><br>
-    <input class="blank_7" style="margin-top: 10px;"><label style="margin-left: 10px;">Statussymbol (ohne Artikel, singular)</label><br>
-    <input class="blank_8" style="margin-top: 10px;"><label style="margin-left: 10px;">Statussymbol (ohne Artikel, singular)</label><br>
-    <input class="blank_9" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Nominativ)</label><br>    
-    <input class="blank_10" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
-    <input class="blank_11" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
-    <input class="blank_12" style="margin-top: 10px;"><label style="margin-left: 10px;">Dinge an einem Strand (plural)</label><br>
-    <input class="blank_13" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
-    <input class="blank_14" style="margin-top: 10px;"><label style="margin-left: 10px;">Adverb</label><br>
-    <input class="blank_15" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
-    <input class="blank_16" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Nominativ)</label><br>
-    <input class="blank_17" style="margin-top: 10px;"><label style="margin-left: 10px;">Aktivität, die man mit Freunden macht (infinitiv)</label><br>
-    <input class="blank_18" style="margin-top: 10px;"><label style="margin-left: 10px;">Dinge, die ein Mann besitzt (plural)</label><br>
-    <input class="blank_19" style="margin-top: 10px;"><label style="margin-left: 10px;">Verb (infinitiv)</label><br>
-    <input class="blank_20" style="margin-top: 10px;"><label style="margin-left: 10px;">Lokale Information (wo?)</label><br>
-    <input class="blank_21" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, plural)</label><br>
-    <input class="blank_22" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (plural, nominativ)</label><br>
-    <input class="blank_23" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
-    <input class="blank_24" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>    
-    <input class="blank_25" style="margin-top: 10px;"><label style="margin-left: 10px;">Adverb</label><br>
-    <input class="blank_26" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip I</label><br>
-    <input class="blank_27" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort (best. Artikel, Akkusativ)</label><br>
-    <input class="blank_28" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>    
+        <input class="blank_1" style="margin-top: 10px;"><label style="margin-left: 10px;">Lustiges Wort</label><br>
+        <input class="blank_2" style="margin-top: 10px;"><label style="margin-left: 10px;">Tageszeit als Nomen</label><br>
+        <input class="blank_3" style="margin-top: 10px;"><label style="margin-left: 10px;">Wetter</label><br>
+        <input class="blank_4" style="margin-top: 10px;"><label style="margin-left: 10px;">Synonym für Sohn (best. Artikel, Akkusativ)</label><br>
+        <input class="blank_5" style="margin-top: 10px;"><label style="margin-left: 10px;">Adverb</label><br>
+        <input class="blank_6" style="margin-top: 10px;"><label style="margin-left: 10px;">Körperteil (best. Artikel, Akkusativ)</label><br>
+        <input class="blank_7" style="margin-top: 10px;"><label style="margin-left: 10px;">Statussymbol (ohne Artikel, singular)</label><br>
+        <input class="blank_8" style="margin-top: 10px;"><label style="margin-left: 10px;">Statussymbol (ohne Artikel, singular)</label><br>
+        <input class="blank_9" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (unbest. Artikel, Nominativ)</label><br>    
+        <input class="blank_10" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
+        <input class="blank_11" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
+        <input class="blank_12" style="margin-top: 10px;"><label style="margin-left: 10px;">Dinge an einem Strand (plural)</label><br>
+        <input class="blank_13" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
+        <input class="blank_14" style="margin-top: 10px;"><label style="margin-left: 10px;">Adverb</label><br>
+        <input class="blank_15" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
+        <input class="blank_16" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, Nominativ)</label><br>
+        <input class="blank_17" style="margin-top: 10px;"><label style="margin-left: 10px;">Aktivität, die man mit Freunden macht (infinitiv)</label><br>
+        <input class="blank_18" style="margin-top: 10px;"><label style="margin-left: 10px;">Dinge, die ein Mann besitzt (plural)</label><br>
+        <input class="blank_19" style="margin-top: 10px;"><label style="margin-left: 10px;">Verb (infinitiv)</label><br>
+        <input class="blank_20" style="margin-top: 10px;"><label style="margin-left: 10px;">Lokale Information (wo?)</label><br>
+        <input class="blank_21" style="margin-top: 10px;"><label style="margin-left: 10px;">Nomen (best. Artikel, plural)</label><br>
+        <input class="blank_22" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (plural, nominativ)</label><br>
+        <input class="blank_23" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>
+        <input class="blank_24" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>    
+        <input class="blank_25" style="margin-top: 10px;"><label style="margin-left: 10px;">Adverb</label><br>
+        <input class="blank_26" style="margin-top: 10px;"><label style="margin-left: 10px;">Partizip I</label><br>
+        <input class="blank_27" style="margin-top: 10px;"><label style="margin-left: 10px;">Ort (best. Artikel, Akkusativ)</label><br>
+        <input class="blank_28" style="margin-top: 10px;"><label style="margin-left: 10px;">Adjektiv (ohne Deklination)</label><br>     
         
 </div>
 <button id="submit_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Submit</button>
@@ -83,7 +88,7 @@
 <button id="showOriginal_button" style="font-size: 20px; padding: 15px; margin-top: 50px;">Show Original</button>
 </div>
 
-<div id="first_text" style="max-width: 400px; float: left; font-size: 20px;">
+<div class="text_box"><div id="first_text" style="max-width: 400px; float: left; font-size: 20px;">
 <h1 class="text" class="text" id="7">
     <scope class="b1">Erl</scope>könig<br><br>Wer reitet so spät durch 
     <scope class="b2">Nacht</scope> und 
@@ -125,7 +130,7 @@
 </h1>
 </div>
 
-<div style="max-width: 400px; float: right; margin-right: auto; ">
+<div style="max-width: 400px; float: right; margin-right: 200px; ">
 <h1 id="original_text" class="original_text">
     Erlkönig<br><br>
     Wer reitet so spät durch Nacht und Wind?<br>
@@ -164,5 +169,16 @@
 </h1>
 </div>
 </div>
+</div>
 </body>
+
+<link rel="shortcut icon" type="image/jpg" href="img/favicon.png">    
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="css/default.css">    
+<link rel="stylesheet" type="text/css" href="css/sidenav.css"> 
+<link rel="stylesheet" type="text/css" href="css/index.css"> 
+<link rel="stylesheet" type="text/css" href="css/madlibs.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script/menuScript.js"></script>
+<script src="script/madlibsScript.js"></script>
 </html>

@@ -1,0 +1,85 @@
+.box_for_comics {
+    margin: auto;
+    display: flex;
+    width: 60%;
+    
+    flex-direction: column;
+}
+.first_box {
+    display: flex;
+    justify-content: space-between;
+}
+.second_box {
+    display: flex;
+    
+}
+.third_box {
+    display: flex;
+    
+}
+.fourth_box {
+    
+    display: flex;
+    align-items: flex-end;
+}
+.fifth_box {
+    display: flex;
+    
+    
+}
+.left {
+    flex: 1;
+    text-align: center;
+    width: 40%;
+    
+    margin: auto;
+
+}
+.right {
+    text-align: center;
+    flex: 1;
+    margin: auto;
+    width: 40%;
+    
+}
+.text {
+    font-size: 25px;
+    font-family: 'Alegreya', serif;
+    text-align: left;
+}
+.gerping_explained_title {
+    margin: 0px;
+    font-size: 40px;
+    text-align: left;
+    align-items: flex-end;
+    font-family: 'Alegreya', serif;
+}
+.gerping_explained {
+    font-size: 20px;
+    font-family: 'Alegreya', serif;
+}
+.gerping_title_box {
+    flex: 1;
+}
+.star_text {
+    width: 60%;
+    margin: auto;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.copyright_info {
+    margin-top: 200px;
+    background-color: #3b3b3b; 
+    width: 100%; 
+    height: 100px; 
+    padding: 0px; 
+    bottom: 0;       
+}
+.copyright_text {
+    width: 80%;
+    margin-top: 0px;
+    font-size: 20px; 
+    text-align: right; 
+    padding: 35px; 
+    color: white;
+}

@@ -7,121 +7,65 @@
 
 
 </head>
-<body >
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script/menuScript.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
-    
+<body > 
 
 <div class="background">
-    <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; height: auto; margin: auto; ">
-        <div class="top_bar" style="margin-top: 0px;">
-        <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 50px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+    <div class="menu">
+    <div class ="top_menu">
+        
+    <div class="image_container">                
+        <a href="index.html"><img class="icon" style="max-height: 40px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
         <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
-        <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
-        <a href="index.html"><img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png"></a>
-        <a href="#" style="margin-left: 280px; font-size: 20px;" onclick="backEndInfo()">login</a>
-        <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
-        <div class="working_backend" id="working_backend">
-            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
-        </div>
-        <div id="cross_line" class="cross_line_horizontal" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 50px;"></div>
-        </div>
-        <div id="mySidenav"class="sidenav">
-        <div class="line_vertical_menu"></div>
-        <div id="sidebar_content" style="margin-top: 20px;">
-        <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
-        <a href="index.html">Home</a>
-        <a href="gerping.html">Gerping</a>
-        <a href="grammar.html">Grammar</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-        <a href="thank_you.html">Donate</a>
-        </div>
+        <a href="help.html"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
+        <a href="index.html"><img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png"></a>                              
     </div>
+    <div class="login_register_box">
+        <a href="#" class="login_link" onclick="backEndInfo()">login</a>
+        <a href="#" class="register_link" onclick="backEndInfo()">register</a>
+        
     </div>
     
-<div class="faq_questions" style="margin-left: 50px; margin-right: 200px; margin-top: 50px;">
-    <h1 style="font-size: 25px;">Häufig gestellte Fragen (FAQ)</h1>
+            
     
-
-    <h2 class="faq_question" style="margin-top: 30px;">
-    1. There is no way I can learn all the articles to all the words. What are the rules?<br>
-    </h2>
-    <h2 class="faq_answer">A: First of all, you have to start believing in yourself. Second, 
-    <a style="font-size: 18px; margin-left: 0px;" href="articles.html"><u>here</u></a> are some rules. 
-    Unfortunately, there are quite a few of them and many nouns don't fall under any of those categories.
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    2. Is this the right website for me to learn German from start to finish?<br>
-    </h2>
-    <h2 class="faq_answer">A: That's a dumb question so I'm glad you didn't ACTUALLY ask that. Absolutely not. As a matter of fact, I personally think that learning a language with any
-    electrical device is a waste of time. However, I also think that repeating vocab using pieces of paper and a pen is 
-    a waste of ressources. So clicking on stuff here is supposed to be merely complementary to a REAL class (also let's not get used to online-classes,
-    please. I understand that during COVID-19 there's no other choice. Call me old-fashioned but I don't like this webcam-business).
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    3. What's all this vocabulary? How do you decide what's A1, A2, and so on?<br>
-    </h2>
-    <h2 class="faq_answer">A: These nouns have been extracted from the "Motive" books. Some of them may repeat themselves or be reused as parts of
-    other compound words, which I find to be a GOOD thing, since the goal here is to get a "feeling" for the correct article and not necessarily remember
-    as many individual nouns as possible (which is also a good thing, though). But yeah, it's pretty arbitrary.
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    4. How many words are there in each level?<br>
-    </h2>
-    <h2 class="faq_answer">A: Over 600. The sequence is random and doesn't end.
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    5. How were you able to create such a magnificent website?<br>
-    </h2>
-    <h2 class="faq_answer">A: I watched html/css and JavaScript tutorials on Skillshare.com because the COVID-19 lockdown almost turned me into an alcoholic and so I had 
-    to start doing something with my time. Thanks for the compliment by the way, I really appreciate it.
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    6. This website really helped me learn all the articles to all the nouns! How could I repay your kindness? The "Send Me Money"-link is under construction.<br>
-    </h2>
-    <h2 class="faq_answer">A: That's really kind of you and don't think for a moment, I wouldn't accept your money. However, I don't yet know how to set up a donation thing
-        and ads give me cancer so I guess I'm not going to be making any money with this website for now.
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    7. Don't tell me you did all the artwork yourself too!<br>
-    </h2>
-    <h2 class="faq_answer">A: I absolutely did. I'm pretty talented, aren't I?
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    8. Yes, you really are!<br>
-    </h2>
-    <h2 class="faq_answer">A: Aww thanks :). You're talented too!
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    9. Do you want to get coffee some time?<br>
-    </h2>
-    <h2 class="faq_answer">A: Sure, when are you free?
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    10. How about next friday? Grab a coffee, then go see a movie maybe?<br>
-    </h2>
-    <h2 class="faq_answer">A: I'm interested, how about we meet at 5 p.m. at Starbucks?
-    </h2 class="faq_question">
-    <h2 class="faq_question" style="margin-top: 30px;">
-    10. Cool, see you then!<br>
-    </h2>
-    <h2 class="faq_answer">A: Bye :) <br><br>Man that was the best FAQ I've ever had.
-    </h2 class="faq_question">
-
-
-    
-    
+    <div id="mySidenav"class="sidenav">
+    <div class="line_vertical_menu"></div>
+    <div id="sidebar_content" style="margin-top: 20px;">
+    <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
+    <a href="index.html">Home</a>
+    <a href="gerping.html">Gerping</a>
+    <a href="grammar.html">Grammar</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="thank_you.html">Donate</a>
+    </div>
 </div>
+                    
+                    
+                </div>
+                <div id="cross_line" class="cross_line_horizontal"></div>
+                <div class="working_backend_box"><div class="working_backend" id="working_backend">
+                    <p style="margin: auto; text-align: left; padding: 5px;">still learning<br>backend programming :)</p>
+                </div>
+                </div>
+        </div>   
+    
+        <div class="gerping_links">
+            <h1 class="gerping_title">Questons?</h1>
+            <div class="gerping_menu_links"><h2>letsgerp@gmail.com</h2></div>
+        </div>
+
+
     
 
 
 
 </div>
-
-
+<link rel="shortcut icon" type="image/jpg" href="img/favicon.png">    
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="css/default.css">    
+<link rel="stylesheet" type="text/css" href="css/sidenav.css">
+<link rel="stylesheet" type="text/css" href="css/gerping_menu.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script/menuScript.js"></script>
 </body>
 </html>

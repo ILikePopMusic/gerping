@@ -1,0 +1,100 @@
+
+
+.gerping_and_note {
+    display: flex;
+}
+.gerping_box {
+    flex: 3;    
+    margin: auto;
+    width: 100%;
+}
+.note_text {
+    font-style: italic;
+    font-size: 15px;
+    flex: 0.5;
+    order: 5;     
+}
+.white_space {
+    flex: 0.5;
+        
+}
+.buttons_box {    
+    text-align: center;
+}
+.test_box {
+    display: flex;    
+}
+.wrong_word_left {
+    font-size: 15px;
+    padding: 20px;    
+    flex: 1;
+    order: 2;
+    text-align: right;
+    color: red;
+}
+.vocab_test_box {    
+    text-align: center;
+    order: 3;
+    flex: 2.5;
+}
+.wrong_word_right {
+    font-size: 15px;
+    padding: 20px;    
+    order: 4;
+    flex: 1;
+    color: green;
+}
+.vokabel_test {    
+    border-radius: 50px;
+    border: 5px solid black;
+    margin: auto;
+    min-width: 400px;
+}
+.wrong_verb_button {
+    margin: auto;
+    text-align: center;
+}
+.wrong_vocab_box {
+    padding: 20px;
+    
+    text-align: center;
+}
+.label_and_input {
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    justify-content: center;
+}
+.person {
+    padding: 15px;    
+    width: 40%;
+}
+.verbInput {
+    flex: 1;
+    min-height: 30px;    
+}
+.participleInput {
+    flex: 0.5;
+    min-height: 30px;
+    justify-content: center;
+    
+}
+.sendButton {
+    padding: 10px;
+    box-shadow: 0 4px #999;    
+}
+.answer_counter {
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+}
+.correct_answer {
+    flex: 1;
+}
+.incorrect_answer {
+    flex: 1;
+}
+.article_buttons {
+    text-align: center;
+    margin: auto;
+}

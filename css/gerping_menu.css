@@ -1,0 +1,110 @@
+.background {
+    font-family: 'Alegreya', serif;
+    color: #3b3b3b
+}
+.gerping_title {
+    margin: 0;
+}
+
+.how_to_play {
+    width: 50%;    
+    display: none;
+    
+    font-size: 12px;
+}
+
+.gerping_menu_links {
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+}
+
+/* Madlibs sidenav */
+
+.madlibs_nav {
+    height: 100%; 
+    width: 0; 
+    position: fixed;
+    z-index: 1; 
+    top: 200px; 
+    right: 0;
+    background-color: white; 
+    overflow-x: hidden;
+    padding-top: 0;
+    transition: 0.3s;
+}
+
+.madlibs_nav_content a {
+    padding: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color:#3b3b3b;
+    display: block;
+    transition: 0.3s;
+    margin-left: 40px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.madlibs_nav_content a:hover {
+    color: lightgrey;
+}
+
+.madlibs_links {
+    color: #3b3b3b;  
+    width: 400px;
+    float: left;
+}
+
+.vertical_line_madlibs {
+    background-color: #3b3b3b; 
+    float: left; 
+    width: 2px; 
+    height: 240px; 
+    margin-top: 15px;
+}
+.vertical_line_madlibs {
+    background-color: #3b3b3b; 
+    float: left; 
+    width: 2px; 
+    height: 240px; 
+    margin-top: 15px;
+}
+
+/* gerping sidenav */
+
+.gerping_nav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 200px; /* Stay 200px from the top */
+    right: 0;
+    background-color: white; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 0; /* Place content 60px from the top */
+    transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.gerping_nav_content a {
+    padding: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color:#3b3b3b;
+    display: block;
+    transition: 0.3s;
+    margin-left: 40px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.gerping_nav_content a:hover {
+    color: lightgrey;
+}
+.vertical_line_gerping {
+    background-color: #3b3b3b; 
+    float: left; 
+    width: 2px; 
+    height: 200px; 
+    margin-top: 15px;
+}

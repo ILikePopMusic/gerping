@@ -8,9 +8,11 @@ var wrongAnswer = 0;
 var totalVerbs = 0;
 var successRate = 0;
 var wrongWords = [];
+var wrongInput = [];
 var randomConjugation = 1;
 var conjSequence = 1;
 var buttonCLicked;
+
 
 
 function checkInput() {
@@ -41,6 +43,8 @@ function checkWord() {
         document.getElementById("wrong_old_word").innerText = person + ' ' + verbForm;
         document.getElementById("correct_old_word").innerText = "";
         wrongWords.push("<br>" + person + " " + verbForm);
+        wrongInput.push("<br>" + person + " " + verbInput);
+        
         getStats();
         if (randomConjugation == 1) {
             getVerb();
@@ -67,7 +71,10 @@ function getStats() {
 }
 
 function showWrongVerbs() {
+    document.getElementById("show_words_list").style.visibility = "visible";
+    console.log("made visible");
     document.getElementById("wrong_vocab_list").innerHTML = wrongWords;
+    document.getElementById("wrong_input_list").innerHTML = wrongInput;
 }
 
 
@@ -157,6 +164,8 @@ function getFullVerb() {
 }
 
 function resetStats() {
+document.getElementById("verbInput").disabled = false;
+document.getElementById("sendButton").disabled = false;
 document.getElementById("correct_answer").innerText = 0;    
 document.getElementById("incorrect_answer").innerText = 0;
 document.getElementById("total_verbs").innerText = 0;
@@ -165,11 +174,13 @@ document.getElementById("wrong_vocab_list").innerHTML = "";
 document.getElementById("wrong_old_word").innerText = ""
 document.getElementById("correct_old_word").innerText = "";
 document.getElementById("verbInput").value = ""
+document.getElementById("show_words_list").style.visibility = "hidden"
 correctAnswer = 0;
 wrongAnswer = 0;
 totalVerbs = 0;
 successRate = 0;
 wrongWords = [];
+wrongInput = [];
 
 document.getElementById("success_rate").style.color = "black";
     if (randomConjugation == 1) {
@@ -179,16 +190,24 @@ document.getElementById("success_rate").style.color = "black";
         getFullVerb();
     }
 }
+function switchConjugation() {
+    if (document.getElementById("full_identifier").style.color == "grey") {
+        document.getElementById("random_identifier").style.color = "grey"
+        document.getElementById("full_identifier").style.color = "black"
+        selectConjugationFull();
+    }
+    else {
+        document.getElementById("random_identifier").style.color = "black"
+        document.getElementById("full_identifier").style.color = "grey"
+        selectConjugationRandom();
+    }
+}
 
 function selectConjugationFull() {
-    document.getElementById("fullButton").style.backgroundColor = "darkgrey";
-    document.getElementById("randomButton").style.backgroundColor = "#eaeaea"
     conjSequence = 1;
     randomConjugation = 0;
 }
 function selectConjugationRandom() {
-    document.getElementById("randomButton").style.backgroundColor = "darkgrey"
-    document.getElementById("fullButton").style.backgroundColor = "#eaeaea";
     randomConjugation = 1;
 }
 

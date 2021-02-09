@@ -3,91 +3,85 @@
     <meta charset="UTF-8">
 <head>
     <title>Practice German!</title>
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script/menuScript.js"></script>
+    
 </head>
 <body>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="css/css_sheet.css"> 
-    
-
 <div class="background">
-    <div id="fucking_menu" style="top: 0; background-color: white; width: 100%; height: auto; margin: auto; ">
-        <div class="top_bar" style="margin-top: 0px;">
-        <a href="index.html" class="home_icon"><img style="max-height: 40px; margin-left: 50px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
-        <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
-        <a href="help.html" class="home_icon"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
-        <a href="index.html"><img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png"></a>
-        <a href="#" style="margin-left: 280px; font-size: 20px;" onclick="backEndInfo()">login</a>
-        <a href="#" style="margin-left: 20px; font-size: 20px;" onclick="backEndInfo()">register</a>
-        <div class="working_backend" id="working_backend">
-            <p style="padding: 8px; margin-top: 0px;">still learning backend programming :)</p>
-        </div>
-        <div id="cross_line" class="cross_line_horizontal" style="background-color: #3b3b3b; height: 2px; width: 100%; margin-left: 50px;"></div>
-        </div>
-        <div id="mySidenav"class="sidenav">
-        <div class="line_vertical_menu"></div>
-        <div id="sidebar_content" style="margin-top: 20px;">
-        <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
-        <a href="index.html">Home</a>
-        <a href="gerping.html">Gerping</a>
-        <a href="grammar.html">Grammar</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-        <a href="thank_you.html">Donate</a>
-        </div>
-    </div>
-    </div>
-    <div class="box_for_comics" style="float: top; margin-top: 50px; margin-left: auto; padding: 0px; margin-right: auto; height: 1000px; width: 1000px; background-color: white; display: block;">
-        
-        <div class="first_comic" style="margin-left: auto; margin-right: auto; height: 500px; width: 900px; background-color: white; display: block;">
-            <img style="max-height: 550px; margin-left: 50px;" src="img/whatsthearticle.png">
-            <h1 style="float: right; float: top; margin-top: 200px; margin-right: 80px; font-size: 25px; color: #3b3b3b;">Are you sick of not knowing<br>the articles to random<br>German words?</h1>
-        </div>
-        <div class="second_comic" style="margin-left: auto; margin-right: auto; height: 300px; width: 900px; background-color: white; display: block;">
-            <h1 style="float: left; margin-top: 150px; margin-left: 80px; font-size: 25px; color: #3b3b3b;">Come join thousands*<br>of satisfied students and<br>start Gerping!</h1>
-            <img style="max-height: 550px; margin-left: 150px;" src="img/whatchadoin.png">
-        </div>
-        <div style="height: 300px; margin-top: 100px;">
+    <div class="menu">
+        <div class ="top_menu">
             
-            <div style="float: left; max-width: 300px;"><h1 style="margin-top: 200px; margin-left: 130px; font-size: 25px; color: #3b3b3b;">What the hell is "Gerping"?</h1></div>
-            <div style="float: right; margin-top: 200px; max-width: 300px;"><img style="max-height: 200px; float: right; margin-right: 200px;" src="img/questionmark_img.png"></div>
-
-
+                    <div class="image_container">                
+                        <a href="index.html"><img class="icon" style="max-height: 40px; margin-top: 60px; float: left;" src="img/home_icon.png"></a>
+                        <a href="#" class="openMenu" onclick="openNav()"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/menu_icon.png"></a>
+                        <a href="help.html"><img style="max-height: 40px; margin-left: 10px; margin-top: 60px; float: left;" src="img/help_icon.png"></a>
+                        <a href="index.html"><img id="logo" style="margin-left: 10px; max-height: 100px;" src="img/gerping_logo_neu1.png"></a>                              
+                    </div>
+                    <div class="login_register_box">
+                        <a href="#" class="login_link" onclick="backEndInfo()">login</a>
+                        <a href="#" class="register_link" onclick="backEndInfo()">register</a>
+                        
+                    </div>
+                    
+                            
+                    
+                    <div id="mySidenav"class="sidenav">
+                    <div class="line_vertical_menu"></div>
+                    <div id="sidebar_content" style="margin-top: 20px;">
+                    <a href="#" class="openMenu" onclick="closeNav()"><img style="max-height: 20px; margin-left: 90px;" src="img/arrow_left.png"></a>
+                    <a href="index.html">Home</a>
+                    <a href="gerping.html">Gerping</a>
+                    <a href="grammar.html">Grammar</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="thank_you.html">Donate</a>
+                    </div>
+                </div>
+            
+            
         </div>
-        <div style="height: 800px; margin-top: 100px;">
-            <img style="max-height: 250px; float: left; margin-left: 100px;" src="img/exclamationmark_img.png">
-            <u style="color: grey; float: right;"><h1 style="font-size: 40px; margin-right: 100px; margin-top: 200px; color: #3b3b3b">The Gerping-Method</h1></u>
-            <h1 style="float: right; font-size: 20px; margin-left: 50px; margin-right: 50px; color: #3b3b3b;">Gerping is a rediscovered learning method that has been in use during the Bronze Age by the ancient Egyptians! 
-            It stands for "G E R man Practic I N G" and aspires to fundamentally change the learning landscape that we know today!
+        <div id="cross_line" class="cross_line_horizontal"></div>
+        <div class="working_backend_box"><div class="working_backend" id="working_backend">
+            <p style="margin: auto; text-align: left; padding: 5px;">still learning<br>backend programming :)</p>
+        </div>
+        </div>
+    </div>
+    <div class="box_for_comics">
+        
+        <div class="first_box">
+            <div class="left"><img style="max-height: 450px;" src="img/whatsthearticle.png"></div>
+            <div class="right"><h1 class="text">Are you sick of not knowing<br>the articles to random<br>German words?</h1></div>
+        </div>
+        <div class="second_box">
+            <div class="left"><h1 class="text">Come join thousands*<br>of satisfied students and<br>start Gerping!</h1></div>
+            <div class="right"><img style="max-height: 450px;" src="img/whatchadoin.png"></div>
+        </div>
+        <div class="third_box">
+        <div class="left"><h1 class="text">What the hell is "Gerping"?</h1></div>
+        <div class="right"><img style="max-height: 200px;" src="img/questionmark_img.png"></div>
+        </div>
+        <div class="fourth_box">
+            <div class="left"><img style="max-height: 250px;" src="img/exclamationmark_img.png"></div>
+            <div class="gerping_title_box"><h1 class="gerping_explained_title"><u>The Gerping-Method</h1></u></div>
+        </div>  
+        <div class="fifth_box">
+        <h1 class="gerping_explained">Gerping is a rediscovered learning method that has been in use during the Bronze Age by the ancient Egyptians! 
+            It stands for "<u>Ger</u>man Practic<u>ing</u>" and aspires to fundamentally change the learning landscape that we know today!
             With these newly discovered methods, it has become unbelievably easy to
-            brute force knowledge into our brains using "repetition". It's as simple, as it is effective!</h1>
-
-            
-        </div>
-
-        <div><p style="margin-left: 50px; color: #3b3b3b">*A few thousand requests to the site recorded during the first couple months, by only a handfull of students.</p></div>
-
-        
-    
-    
+            brute force knowledge into our brains using "repetition". It's as simple, as it is effective!</h1></div>            
+    </div>
+    <div class="star_text"><p>*Not actually that many.</p>
     </div>   
-    
-
 </div>
-
-
-<div id="copyright_info" style="background-color: #3b3b3b; width: 100%; height: 100px; padding: 0px; bottom: 0; margin-top: 470px;">
-<h2 style="font-size: 20px; text-align: right; margin-right: 250px; padding: 35px; color: white;">gerping.com &#169 All rights reserved. Copyright 2019 </h2>
+<div class="copyright_info">
+<h2 class="copyright_text">gerping.com &#169 All rights reserved. Copyright 2019 </h2>
 </div>
-
-
-
-
 </body>
-<footer>
-
-
-</footer>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">    
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/default.css">    
+    <link rel="stylesheet" type="text/css" href="css/sidenav.css"> 
+    <link rel="stylesheet" type="text/css" href="css/index.css"> 
+    <link rel="stylesheet" type="text/css" href="css/gerping_menu.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/menuScript.js"></script>
 </html>
